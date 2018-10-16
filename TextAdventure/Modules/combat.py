@@ -1,1 +1,5 @@
-print("This is a test string")
+import time
+
+clock = time.monotonic()
+while True:
+    print(clock)

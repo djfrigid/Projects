@@ -3,6 +3,7 @@
 from entities import player
 
 def create():
+    
     availablePoints = 10
 
     while availablePoints > 0:

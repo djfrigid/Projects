@@ -10,11 +10,20 @@
 player = {
     
     "name" : "Ulysses", 
-    "STR" : 0,
-    "DEX" : 0, 
-    "CON" : 0,
-    "WIS" : 0,
-    "STA" : 0
+    "STR" : 5,
+    "DEX" : 2, 
+    "CON" : 5,
+    "WIS" : 5,
+    "STA" : 5, 
     "Inventory" : []
         
 }
+
+siren = {
+    
+    "name" : "Siren",
+    "STR" : 2,
+    "DEX" : 3,
+    "CON" : 5
+}
+

@@ -2,7 +2,10 @@
 
 """ This file will contain the game logic and functions related to displaying information
 
-    game name 
+    game name?
+    
+    variable naming convention. i am using this so a variable called "my variable" should be called "myVariable" and NOT "my_variable "
+    
 
  """
 

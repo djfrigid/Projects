@@ -5,3 +5,4 @@ from combat import *
 from entities import *
 from utilities import *
 
+divineIntervention()

@@ -1,4 +1,5 @@
 import re, random
+from termcolor import colored 
 
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'bad', 'beautiful', 'been', 'better', 'big', 'can', 'every', 'for',
@@ -39,11 +40,33 @@ def normaliseInput(userInput):
     
     return iwords
 
-def divineIntervention():
+def divineIntervention(): #this as present can be abused , consider adding a penalty
     prayer = random.randint(0,100)
 
-    if prayer in range(0,50):
-      print("You fall to your knees in prayer, petitioning the gods for aid. They ignore you.")
+    if prayer in range(0,51):
+      print("You fall to your knees in prayer, petitioning the gods for aid... They ignore you.")
     elif prayer in range(51,56):
-      print("")
+      
+    elif prayer in range(56,61):
+      print("δεν μπορείτε να διαβάσετε αυτό το ... εκτός αν υποθέτω ο Έλληνας σας. Ωστόσο, αν μπορείτε, κρατήστε αυτό για τον εαυτό σας.")
+    elif prayer in range(61,66):
+      print("") #joke -mu
+    elif prayer in range(66,71):
+      print("") #joke -mu
+    elif prayer in range(71,76):
+      print("You fall to your knees in prayer, petitioning the gods for aid... Your pocket grows strangely heavy and starts wriggling, emitting a slew of eey-ooh's. ") #joke -joke item
+    elif prayer in range(76,81):
+      print("")#joke - visual appealing
+    elif prayer in range(81,86):
+      print("")# maybe useful or harmful roll d2 to determine
+    elif prayer in range(86,91):
+      print("")#
+    elif prayer in range(91,96):
+      print("You fall to your knees in prayer, petitioning the gods for aid... Your prayer is answered, your mind filling with forbidden knowledge.") #useful - restores some hints
+    elif prayer in range(96,101):
+      print("You fall to your knees in prayer, petitioning the gods for aid... and your prayers are answered. You feel a warm energy suffuse through your body before it turns blindingly hot and you are burned to a cinder by divine power ")
+      exit()
+      #death
 
+
+#

@@ -93,7 +93,7 @@ def combat(monster):
             exit()
         elif monster["CON"] <= 0:
             print("---------------------------------")
-            print("With a mighty blow, you defeat the " + monster["name"]) #chage the flavourtext here 
+            print("With a mighty blow, you defeat the " + monster["name"]) #change the flavourtext here 
             print("---------------------------------")
 
                 

@@ -1,5 +1,5 @@
 import re, random
-from termcolor import colored 
+import player from entities
 
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'bad', 'beautiful', 'been', 'better', 'big', 'can', 'every', 'for',
@@ -46,7 +46,7 @@ def divineIntervention(): #this as present can be abused , consider adding a pen
     if prayer in range(0,51):
       print("You fall to your knees in prayer, petitioning the gods for aid... They ignore you.")
     elif prayer in range(51,56):
-      
+      print("You fall to your knees in prayer, petitioning the gods for aid... you are answered ")
     elif prayer in range(56,61):
       print("δεν μπορείτε να διαβάσετε αυτό το ... εκτός αν υποθέτω ο Έλληνας σας. Ωστόσο, αν μπορείτε, κρατήστε αυτό για τον εαυτό σας.")
     elif prayer in range(61,66):
@@ -58,9 +58,16 @@ def divineIntervention(): #this as present can be abused , consider adding a pen
     elif prayer in range(76,81):
       print("")#joke - visual appealing
     elif prayer in range(81,86):
-      print("")# maybe useful or harmful roll d2 to determine
+        
+        d2 = random.randint(0,2)
+        if d2 == 0:
+            print()# insert flavourtext here
+            player["CON"] += 2
+        else:
+            player["CON"] -= 1
+            
     elif prayer in range(86,91):
-      print("")#
+      print("") #
     elif prayer in range(91,96):
       print("You fall to your knees in prayer, petitioning the gods for aid... Your prayer is answered, your mind filling with forbidden knowledge.") #useful - restores some hints
     elif prayer in range(96,101):

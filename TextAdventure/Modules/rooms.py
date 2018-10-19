@@ -18,7 +18,7 @@ rooms = {
 cyclopsEntrance = {
 
 	"name" : "Entrance",
-	""
+	"description": "PLACEHOLDER STRING"
 	
 
 }
@@ -27,7 +27,7 @@ cyclops = {
 	
 	"name": "Cave of the Cyclops",
 	"description": "You enter a dim",
-	"items": []
+	"items": [],
 	"creatures" : []
 
 }

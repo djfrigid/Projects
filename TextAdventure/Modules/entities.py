@@ -11,7 +11,7 @@ player = {
     
     "name" : "Ulysses", 
     "STR" : 5,
-    "DEX" : 2, 
+    "DEX" : 5, 
     "CON" : 5,
     "WIS" : 5,
     "STA" : 5, 
@@ -24,6 +24,15 @@ siren = {
     "name" : "Siren",
     "STR" : 2,
     "DEX" : 3,
-    "CON" : 5
+    "CON" : 10
+    
 }
 
+box = {
+    
+    "STR" : 0
+    "DEX" : 0
+    "CON" : 10
+    
+    
+    }

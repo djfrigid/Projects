@@ -32,3 +32,10 @@ earplug = {
 	"description" : "a set of wireless earbuds with a curious coating of the prevoius owners earwax. Yuck. You try and turn them on... but the battery is dead."
 }
 
+integrity = {
+    
+    "name": "Integrity",
+    "description" : "Your personal pride. Easy to lose."
+    
+    }
+

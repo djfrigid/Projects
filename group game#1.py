@@ -48,7 +48,7 @@ basment={
 Circe={
     
     "name" : """Circe's island""",
-    "description": "fxjhndsndhndthmndthjmdthmjdjmdh"
+    "description": "You reach a beautiful island were the witch Circe's living.Circe could turns men into pigs and to protect yourself from her enchanments you can eat her magic herbs"
 
 }
 	
@@ -95,7 +95,8 @@ cyclops = {
 sirenCorridor = {
     "name": "The Long Corridor",
         
-	"description": "The relentless Cardiffian rain has flooded the corridor. You see two men (one of which is oddly wearing ear muffs) steal your raft althogh your glad to part with it ", #potential for sign language further hints at absence of sound
+	"description": "The relentless Cardiffian rain has flooded the corridor. You see two men (one of which is oddly wearing ear muffs) steal your raft although your glad to part with it, they trying to    ",
+    #potential for sign language further hints at absence of sound
         
 	"items": [],
         

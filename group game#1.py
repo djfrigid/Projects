@@ -66,8 +66,8 @@ Circe={
     Following her are three abnormaly large ginger tabby cats that lay down comptemtly by the roaring fire. Displayed in the center of the room life size bronze piggy bank.
     """
     
-    'examineDescription':"""Round her supple waist there is only a scarlet sash, she has a wildly seductive, crazy, loopy nymphetic air about her.
-     Smirking and addmitedly flatterd from your wondering eyes, she reminds you that hers are geographicly speaking "up here..."   """,
+    'examineDescription':"""Round her supple waist is scarlet sash , she has a wildly seductive, crazy, loopy nymphetic air about her.
+     Smirking and visably flatterd by your wondering eyes, she reminds you that her eyes, "are up here..."   """,
 
 
 
@@ -128,7 +128,7 @@ sirenCorridor = {
     "name": "The Long Corridor",
         
 	"description": """The relentless Cardiffian rain has flooded the corridor and only the tif taf of the water seeping throgh the cracks in the roof break the silence.
-	You can just about make out the far end where two men are wearing ear protectors.  there is an pungent smell of rotting flesh 
+	You can just about make out the far end where two men are wearing ear protectors.  There is an pungent smell of rotting flesh 
 	"""
         
 	"items": [redherring],

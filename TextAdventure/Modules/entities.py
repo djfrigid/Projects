@@ -30,9 +30,17 @@ siren = {
 
 box = {
     
-    "STR" : 0
-    "DEX" : 0
+    "name": "Box", 
+    "STR" : 0,
+    "DEX" : 0,
     "CON" : 10
     
-    
     }
+
+cyclops = {
+    
+    "name":"Polyphemus", 
+    "STR":7,
+    "DEX":1,
+    "CON":30    
+}

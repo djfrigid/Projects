@@ -1,0 +1,7 @@
+name Ulysses
+STR 5
+DEX 5
+CON 5
+WIS 5
+STA 5
+Inventory []

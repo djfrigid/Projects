@@ -7,19 +7,22 @@ from items import *
     Items - list of dictionaries 
     Creatures - list of dictionaries
     Examine Description - String
+    lowHelp - String - the Low WIS hint
+    midHelp - String - the mid WIS hint
+    highHelp - String - the high WIS hint
 
 """
 
 rooms = {
-    calypsoCave,
-    beach,
-    basment,
-    cyclopsEntrance,
-    cyclops,
-    sirenCorridor,
-    sirenLair,
-    treasury,
-    Circe
+   "calypsoCave" : calypsoCave,
+   "beach" : beach,
+   "basement" : basement,
+   "cyclopsEntrance" :cyclopsEntrance,
+   "cyclops": cyclops,
+   "sirenCorridor":sirenCorridor,
+   "sirenLair" :sirenLair,
+   "treasury" :treasury,
+   "Circe" : Circe
     }
 
 
@@ -76,14 +79,14 @@ cyclops = {
 	
 	"name": "Cave of the Cyclops",
         
-	"description": "You enter a fluorescently lit office. Aggresive clouds of whiskey vapor arrest your sense of smell water your eyes.
+	"description": """You enter a fluorescently lit office. Aggresive clouds of whiskey vapor arrest your sense of smell water your eyes.
         In the center of the room is a large oak desk with hiking pole leaning on it.
 
         
         The figure slumped slumbering behind it is a broad shouldered, deepcheasted, stronglimbed, freelyfreckeled, wide mouthed, longheaded, bearkneed, brawnyhanded, ruddyfaced drunkard.
         An eyepatch clings to his skin, inset into his gaping cavernous eyesocket.
         #A powerful rhythmic resonance formidable heart thunderer rumblingly causing the ground, vibrate and tremble and the lofty walls of the office to vibrate and tremble.", 
-        The lofty walls of the office pulse rythmically, rumbling in time with the rise and fall of Poly's chest
+        The lofty walls of the office pulse rythmically, rumbling in time with the rise and fall of Poly's chest"""
         
 	"items": [umbrella, earbuds, dinghy],
                  #perhaps umberella?

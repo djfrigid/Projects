@@ -82,7 +82,9 @@ Circe={
 treasury={
     
     "name" : "Circe's Treasury",
-    "description": "PLACEHOLDER STRING",
+    "description": """“You walked in to the treasury, candles lit up all all of a sudden!  Wolf heads and girzzlys heads all over the walls and the ground is full of the finest fur carpet a man can ever witness It looked so different to the point where I felt that the fur , heads and everything had the souls of the animals still present in them. There is a gold door, the door doesn’t have a lock.”
+“ there is a safe in the corner”"""
+",
     'exits'{'down':'Circe'}
 
 }

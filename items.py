@@ -23,7 +23,7 @@ ass = {
 pole = {
 	
 	"name":"Umbrella",
-	"description": "A large umbrella of black cloth and cold metal. The fabric is still wet from use."
+	"description": "A large umbrella of black cloth and cold metal, an ornate horse head carving adorns the handle. The fabric is still wet from use."
 }
 
 earplug = {
@@ -56,7 +56,7 @@ rope = {
 raft = {
 	
 	"name": "Homemade Raft",
-	"description": "A raft you built from gathered resources. The achievement fills you with pride, it is poorly crafted and breaks after one use."
+	"description": "A raft you built from gathered resources. The achievement fills you with pride, it is poorly crafted and will probably break after one use."
 
 }
 
@@ -106,13 +106,21 @@ sandwich = {
 
 drink = {
 	
-	"name": "",
-	"description": ""
+	"name": "energy drink",#name 
+	"description": "A sweet smelling liquid bursting with potential energy to help you get through the day. Restores 3hp."
 
 }
 
 crisps = {
 	
 	"name": "Salted Crisps",
-	"description": "A simple packet of slated crisps, the packet assures no artificial flavourings were used. Restores 5hp."
+	"description": "A simple packet of salted crisps, the packet assures no artificial flavourings were used. Restores 5hp."
+
+}
+
+treasure = {
+	
+	"name": "Odysseus' Bow",
+	"description":"Your bow. Backwards bent limbs fitted with a sturdy string create one of the strongest bows in existence. You dont know how it got here but you are glad nonetheless."
+
 }

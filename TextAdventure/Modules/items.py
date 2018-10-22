@@ -6,7 +6,7 @@
 dinghy = {
 
     "name": "dinghy",
-    "description": "An inflatable pool toy with garish yellow and pink bands. Flames curl along its edges, seemingly an anathema to the rest of the design, bar the mermaid glaring acorss the open water from wehere she is chained to the prow."
+    "description": "An inflatable pool toy with garish yellow and pink bands. Flames curl along its edges, seemingly an anathema to the rest of the design, bar the mermaid glaring across the open water from wehere she is chained to the prow."
 
     }
 

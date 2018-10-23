@@ -149,6 +149,8 @@ def executeGo(direction):
     """
     global currentRoom
     
+    print(currentRoom)
+    
     if isValidExit(currentRoom["exits"], direction):
         print(currentRoom)
         currentRoom = rooms[currentRoom["exits"][direction]]
@@ -299,25 +301,7 @@ def executeCommand(command):
         load()
     else:
         print("This makes no sense.")
-        
-def save():
-    
-    global currentRoom
-    file = open("userData.txt", "w")
-    for key in player:
-        file.write(key + " " +  str(player[key]) + "\n")
-    
-    for key in currentRoom:
-        file.write(key + " " + str(currentRoom[key])) + "\n"
-    file.close()
-    
-def load():
-    global currentRoom
-    file = open("userData.txt", "r")
-    for line in file:
-        line.strip()
-        print(line)        
-            
+
 
     
   

@@ -18,12 +18,6 @@ def main():
 
     while True:
         
-        global currentRoom
-        
-        print("\n")
-        
-        print(currentRoom)
-        
         printRoom(currentRoom)
         
         action = input("> ")

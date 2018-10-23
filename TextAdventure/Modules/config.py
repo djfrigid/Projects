@@ -1,4 +1,9 @@
 from rooms import *
 
-currentRoom = rooms["calypsoCave"]
+hasRun = False
+if hasRun == False:
+    
+    currentRoom = rooms["calypsoCave"]
+    hasRun = True
+
 

@@ -3,7 +3,7 @@ import random
 import time
 from entities import player
 from items import *
-
+from config import *
 
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
 			  'bad', 'beautiful', 'been', 'better', 'big', 'can', 'every', 'for',
@@ -109,7 +109,7 @@ def execute_take(item_id):
 	"""
 	taken = False
 
-	for i in current_room["items"]:
+	for i in currentRoom["items"]:
 		
 		global maxWeight
 		global carryWeight
@@ -123,7 +123,7 @@ def execute_take(item_id):
 		
 		if item_id == i["id"] and canTake == True :
 			store = i
-			current_room["items"].remove(i)
+			currentRoom["items"].remove(i)
 			player["inventory"].append(store)
 			taken = True
 			carryWeight = prospectWeight
@@ -146,7 +146,7 @@ def execute_drop(item_id):
 		if item_id == i["id"]:
 			store = i
 			player["inventory"].remove(i)
-			current_room["items"].append(store)
+			currentRoom["items"].append(store)
 			dropped = True
 			carryWeight -= i["mass"]
 			
@@ -164,10 +164,10 @@ def execute_go(direction):
 	(and prints the name of the room into which the player is
 	moving). Otherwise, it prints "You cannot go there."
 	"""
-	global current_room
+	global currentRoom
 	
-	if is_valid_exit(current_room["exits"], direction):
-		current_room = rooms[currentRoom]["exits"][direction]
+	if is_valid_exit(currentRoom["exits"], direction):
+		currentRoom = rooms[currentRoom]["exits"][direction]
 	else:
 		print("No, You cannot go there")
 		
@@ -232,20 +232,49 @@ def save():
 	print(currentRoom)
 	file = open("userData.txt", "w")
 	for key in player:
-		file.write(key + " " +  str(player[key]) + "\n")
+		file.write(str(player[key]) + "\n")
 	
 	for key in currentRoom:
-		file.write(key + " " + str(currentRoom[key])) + "\n"
+		file.write(str(currentRoom[key]) + "\n")
 	file.close()
 	
 def load():
+	LoadList = []
 	global currentRoom
 	file = open("userData.txt", "r")
 	for line in file:
-		line.strip()
-		print(line)
+		line = re.sub(r"[\n]","",line)
+		LoadList.append(line)
+
+	print(LoadList)
 	
-		
+	player["name"] = LoadList[0]
+	player["STR"] = LoadList[1]
+	player["DEX"] = LoadList[2]
+	player["CON"] = LoadList[3]
+	player["WIS"] = LoadList[4]
+	player["STA"] = LoadList[5]
+	player["inventory"] = LoadList[6]
+	player["MAXCON"] = LoadList[7]
+
+	if LoadList[8] = "Calypso's cave":
+		currentRoom = rooms["calypsoCave"]
+	elif LoadList[8] = "Calypso's island":
+		currentRoom = rooms["beach"]
+	elif LoadList[8] = "The Basement":
+		currentRoom = rooms["basement"]
+	elif LoadList[8] = "Circe's Mansion":
+		currentRoom = rooms["Circe"]
+	elif LoadList[8] = "Circe's Treasury":
+		currentRoom = rooms["treasury"]
+	elif LoadList[8] = "Professor Poly's office":
+		currentRoom = rooms["cyclopsEntrance"]
+	elif LoadList[8] = "Cave of the Cyclops":
+		currentRoom = rooms["cyclops"]
+	elif LoadList[8] = "The Long Corridor":
+		currentRoom = rooms["sirenCorridor"]
+	elif LoadList[8] = "Cheerleading practice room":
+		currentRoom = rooms["sirenLair"]
 
 	
   

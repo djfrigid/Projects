@@ -2,3 +2,11 @@
 PLEASE IGNORE THE .PROJECT FILES, THESE ARE NOT REQUIRED FOR THE GAME AS THEY ARE A PRODUCT OF MY DEVELOPMENT ENVIRONMENT(ECLIPSE) 
 
 When working on something that will become part of the code, try to work in an existing file if appropriate (see the fact we have 2 copies of items.py, one in the modules folder and one at the top of the repository) This is so when I accept the changes, they integrate automatically, rather than just making a new file and then having to be copied over. 
+
+Correct dictionary syntax (see example) requires use of a comma after the defining of each key-value pair. Can people who this concerns double check their syntax before commiting further revisions as otherwise they need to be added each time someone does a commit without them which wastes our time. While on this note, each dictionary needs every key that is in the definition at the top of the page, this means that every room needs an examine description etc. Leaving it out WILL NOT SAVE TIME as a KeyError will be generate if a function is called that tries to access a field that should exist. 
+
+example dictionary = {
+  "name": "a value",
+  "height" : "another value",
+  "weight" : "a third value" (note no comma here as this is the final value)
+}

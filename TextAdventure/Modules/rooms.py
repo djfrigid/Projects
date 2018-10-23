@@ -17,36 +17,82 @@ from entities import *
 calypsoCave={
     
     "name" : """Calypso's cave""",
-    "description": "PLACEHOLDER STRING"
+    "description": "PLACEHOLDER STRING",
+
+    'exits' :{
+    'east':'cyclopsEntrance',
+    'down':'basement',
+    'south':'beach'}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
 
 }
     
 beach={
     
     "name" : """Calypso's island""",
-    "description": "PLACEHOLDER STRING"
+    "description": "PLACEHOLDER STRING",
+    'exits':{'north':'calypsoCave'}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
 
 }
     
 basement={
     
     "name" : "The Basement",
-    "description": "PLACEHOLDER STRING"
+    "description": "PLACEHOLDER STRING",
+    "creatures": [box],
+    'exits':{'up':'calypsoCave'}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
 
 }
     
     
 Circe={
     
-    "name" : """Circe's island""",
-    "description": "You reach a beautiful island were the witch Circe is living.Circe can turn men into pigs and to protect yourself from her enchantments you can eat her magic herbs" # show, don't tell. 
+    "name" : """Circe's Mansion""",
+    "description": """The Mansion you arrive at boast grand white mabrle collumbs and suspicously coulerfull flowers placed seemingly at random around the front room. 
+    Walking down the stairs wearing nothing but a long white silk robe and thinly framedglasses is Circe.
+    Following her are three abnormaly large ginger tabby cats that lay down comptemtly by the roaring fire. Displayed in the center of the room life size bronze piggy bank.
+    """,
+    
+    'examineDescription':"""Round her supple waist is scarlet sash , she has a wildly seductive, crazy, loopy nymphetic air about her.
+     Smirking and visably flatterd by your wondering eyes, she reminds you that her eyes, "are up here..."   """,
+
+
+
+    'exits':{'up':'treasury',
+        'north':'ithyca',
+        '':''}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"#######how does he get to island again>:?
+
+
 
 }
     
 treasury={
     
     "name" : "Circe's Treasury",
-    "description": "PLACEHOLDER STRING"
+    "description": #"""“You walked in to the treasury, candles lit up all all of a sudden!  Wolf heads and girzzlys heads all over the walls and the ground is full of the finest fur carpet a man can ever witness It looked so different to the point where I felt that the fur , heads and everything had the souls of the animals still present in them. There is a gold door, the door doesn’t have a lock.”
+#“ there is a safe in the corner”""" # SYNTAX!!!! of both kinds
+"placeholder string"
+,
+    'exits':{'down':'Circe'}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
 
 }
 
@@ -54,51 +100,87 @@ treasury={
 
 cyclopsEntrance = {
 
-    "name" : "Professor Poly's office",      #####??/???/???????//~?????/////??/??/?/??/?
-    "description": "Up a short flight of stairs,' Professor Polyphemus's Office ' reads on a semi-translucent door in bold black letters with gold trimming. """, #this needs fixing with regard to encompassed
+    "name" : "Professer Polys office",      
+    "description": "Up a short flight of stairs,' Professer Polyphemus's Office' reads on a semi tranclucent door in bold black letters outlined in gold. """ ,
         
-        ## examine function should print(The top of the doorway seems to be worn, perhaps by some unintentional headbutting. The door looks like you could open it if you so decide')
-        ####   "items":"something to awaken the poly...? "
+        "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting. """,#######how do you know the shout command?>?/???   # "items":"something to awaken the poly...? 
     
-"examineDescription": "PLACEHOLDER STRING"
+    'exits':{'south':'cyclops',
+         'east':'''calypsoCave'''}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
+
 }
 
 cyclops = {
     
     "name": "Cave of the Cyclops",
-        
-    "description": """You enter a fluorescently lit office. Aggresive clouds of whiskey vapor arrest your sense of smell water your eyes.
-        In the center of the room is a large oak desk with hiking pole leaning on it.
 
+    "description": """You enter a fluorescently lit office. Aggresive clouds of whiskey vapor arrest your sense of smell cause your eyes to water.
+        In the center of the room is a large oak desk with a black umberella leaning on it.
+    The figure slumped behind it is a broad shouldered, deepcheasted, stronglimbed, freelyfreckeled, wide mouthed, longheaded, bearkneed, brawnyhanded, ruddyfaced drunkard.
+        An eyepatch clings to his skin, inset into his gaping cavernous eyesocket and A powerful rhythmic resonance of polys formidable heart thunderers rumblingly,
+        causing the ground and the lofty walls of the office to vibrate and tremble.""",
         
-        The figure slumped slumbering behind it is a broad shouldered, deepcheasted, stronglimbed, freelyfreckeled, wide mouthed, longheaded, bearkneed, brawnyhanded, ruddyfaced drunkard.
-        An eyepatch clings to his skin, inset into his gaping cavernous eyesocket.
-        The lofty walls of the office pulse rythmically, rumbling in time with the rise and fall of Poly's chest""",
         
-    "items": [umbrella, earbuds, dinghy],
+    "items": [umbrella, earplug, dinghy],
+    #item umberrela should be pointy and have something tieing in with theme carved on the edge of it
+                 
         
-    "creatures" : [cyclops],                                              ##### add wake up squince
-"examineDescription": "PLACEHOLDER STRING"
+    "creatures" : [cyclops],  ###why is this i square braks??                                          
+"examineDescription":"PLACEHOLDER STRING",
+
+
+        'exits':{'north':'cyclopsEntrance'}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
+
 }
 
 sirenCorridor = {
     "name": "The Long Corridor",
         
-    "description": "The relentless Cardiffian rain has flooded the corridor. You see two men (one of which is oddly wearing ear muffs) steal your raft although your glad to part with it, they trying to    ",
-    #potential for sign language further hints at absence of sound
+    "description": """The relentless Cardiffian rain has flooded the corridor and only the tif taf of the water seeping throgh the cracks in the roof break the silence.
+    You can just about make out the far end where two men are wearing ear protectors.  There is an pungent smell of rotting flesh 
+    """,
         
-    "items": [],
+    "items": [redHerring],
         
     "creatures" : [],
     
-    "examineDescription":  "PLACEHOLDER STRING"
+    "examineDescription":"A red herring swims in circles after its own tail.",### how does this exit work if no earbuds
+    'exits':{
+        '?/????':'sirens lair',
+        'north':'Circe'
+        }, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"
 
 }
 
 sirenLair = {
 
-    "examineDescription": "PLACEHOLDER STRING"
-
+     "name": "Cheerleading practice room",
+        
+    "description": """you wade into the cold water fearlesy with images of Ithica in your mind. You see girls bathing in the water red liped and doe eyed creatures dressed provocatively in blue red and white skirts.
+    The little light there reflects of firm pouting breasts and their lustrus song pollutetes your mind with desire as you paddle furiously in their direction.   """,
+        
+    "items": [],
+        
+    "creatures" : [siren],
+    
+    'exits':{'':''}, 
+    
+    "lowHelp" : "PLACEHOLDER STRING", 
+    "midHelp" : "PLACEHOLDER STRING",
+    "highHelp" : "PLACEHOLDER STRING"   ##### if win .... how does this exit work
+     
 }
 
 rooms = {
@@ -111,15 +193,9 @@ rooms = {
    "sirenLair" :sirenLair,
    "treasury" :treasury,
    "Circe" : Circe
-    }
 
+}
 
-""" This handles room definitions . A room is a dictionary with the following attributes 
-
-    Name - string 
-    Description - String 
-    Items - list of dictionaries 
-    Creatures - list of dictionaries
-    Examine Description - String
-
-"""
+def printRoom(currentRoom):
+    
+    print("\n" + currentRoom["name"].upper() + "\n" + currentRoom["description"])

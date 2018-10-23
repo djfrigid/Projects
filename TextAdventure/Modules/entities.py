@@ -15,7 +15,7 @@ player = {
     "CON" : 5,
     "WIS" : 5,
     "STA" : 5, 
-    "Inventory" : []
+    "inventory" : []
         
 }
 
@@ -35,7 +35,7 @@ box = {
     "DEX" : 0,
     "CON" : 10
     
-    }
+}
 
 cyclops = {
     

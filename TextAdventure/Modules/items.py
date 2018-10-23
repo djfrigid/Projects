@@ -1,3 +1,4 @@
+
 """ This file handles item definition. An item is a dictionary with the following attributes 
     "name" - string 
     "description" - string
@@ -6,7 +7,7 @@
 dinghy = {
 
     "name": "dinghy",
-    "description": "An inflatable pool toy with garish yellow and pink bands. Flames curl along its edges, seemingly an anathema to the rest of the design, bar the mermaid glaring across the open water from wehere she is chained to the prow."
+    "description": "An inflatable pool toy with garish yellow and pink bands. Flames curl along its edges, seemingly an anathema to the rest of the design, bar the mermaid glaring acorss the open water from wehere she is chained to the prow."
 
     }
 
@@ -27,7 +28,7 @@ umbrella = {
 earplug = {
     
     "name": "earbuds",
-    "description" : "a set of wireless earbuds with a curious coating of the previous owners earwax. Yuck. You try and turn them on... but the battery is dead."
+    "description" : "a set of wireless earbuds with a curious coating of the prevoius owners earwax. Yuck. You try and turn them on... but the battery is dead."
 }
 
 integrity = {
@@ -119,7 +120,12 @@ crisps = {
 treasure = {
     
     "name": "Odysseus' Bow",
-    "description":"Your bow. Backwards bent limbs fitted with a sturdy string create one of the strongest bows in existence. You don't know how it got here but you are glad nonetheless."
+    "description":"Your bow. Backwards bent limbs fitted with a sturdy string create one of the strongest bows in existence. You dont know how it got here but you are glad nonetheless."
 
 }
 
+redHerring = {
+    
+    "name" : "Red Herring", 
+    "description" : "A medium size fish with an intense red colouration"
+}

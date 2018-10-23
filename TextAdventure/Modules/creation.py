@@ -1,9 +1,10 @@
 """This file handles the creation of the player character at the beginning of the game """
 
 from entities import player
+from rooms import *
 
 def create():
-    
+     
     availablePoints = 10
 
     while availablePoints > 0:
@@ -31,5 +32,7 @@ def create():
             player["CON"]+=1
         else: 
             print("That's not an aspect of yourself, unless of course you are being a deliberate pain.You don't need to improve on that ")
+    
+
             
 #i am likely to update this so the player can assign more than one point at once and again for balancing

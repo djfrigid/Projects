@@ -1,7 +1,10 @@
 import re
 import random
 import time
-from game import currentRoom
+from items import *
+from rooms import *
+from config import currentRoom
+
 
 
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
@@ -79,7 +82,7 @@ def divineIntervention(): #this as present can be abused , consider adding a pen
         #death
 
 
-def execute_take(item_id):
+def executeTake(item_id):
     """This function takes an item_id as an argument and moves this item from the
     list of items in the current room to the player's inventory. However, if
     there is no such item in the room, this function prints
@@ -87,7 +90,7 @@ def execute_take(item_id):
     """
     taken = False
 
-    for i in current_room["items"]:
+    for i in currentRoom["items"]:
         
         global maxWeight
         global carryWeight
@@ -101,7 +104,7 @@ def execute_take(item_id):
         
         if item_id == i["id"] and canTake == True :
             store = i
-            current_room["items"].remove(i)
+            currentRoom["items"].remove(i)
             player["inventory"].append(store)
             taken = True
             carryWeight = prospectWeight
@@ -110,7 +113,8 @@ def execute_take(item_id):
         print()
         print("You cannot take that")
 
-def execute_drop(item_id):
+def executeDrop(itemId):
+    
     """This function takes an item_id as an argument and moves this item from the
     player's inventory to list of items in the current room. However, if there is
     no such item in the inventory, this function prints "You cannot drop that."
@@ -121,10 +125,10 @@ def execute_drop(item_id):
     
     dropped = False
     for i in player["inventory"]:
-        if item_id == i["id"]:
+        if itemId == i["id"]:
             store = i
             player["inventory"].remove(i)
-            current_room["items"].append(store)
+            currentRoom["items"].append(store)
             dropped = True
             carryWeight -= i["mass"]
             
@@ -136,23 +140,28 @@ def execute_drop(item_id):
         
         
         
-def execute_go(direction):
+def executeGo(direction):
+    
     """This function, given the direction (e.g. "south") updates the current room
     to reflect the movement of the player if the direction is a valid exit
     (and prints the name of the room into which the player is
     moving). Otherwise, it prints "You cannot go there."
     """
-    global current_room
+    global currentRoom
     
-    if is_valid_exit(current_room["exits"], direction):
-        current_room = rooms[currentRoom]["exits"][direction]
+    if isValidExit(currentRoom["exits"], direction):
+        print(currentRoom)
+        currentRoom = rooms[currentRoom["exits"][direction]]
     else:
         print("No, You cannot go there")
+
+def isValidExit(exits, exitChoice):
+    
+    return exitChoice in exits
+
         
-def execute_swim():
+def executeSwim():
     """Joke function . If the player has sufficient wisdom they will realize its a bad idea and lose a wisdom point. If they aren't wise enough they go into the sea and die. """
-    
-    
     
     if player["WIS"] >= 7: 
         print("You realize that this probably isn't a good idea and stop once the water reaches about knee height. ")
@@ -161,7 +170,7 @@ def execute_swim():
         print("You throw yourself into the sea and manage to flail around enough to reach deeper water. The sea gets suddenly rough and your flailing is now insufficient to keep your head above water, no matter how hard you thrash. It isn't long before you weaken and the sea swallows you for a final time." 
         )
         
-def execute_kill():
+def executeKill():
     
     """Another joke function, should the player decide they don't want to continue playing and instead die"""
 
@@ -178,10 +187,11 @@ def execute_kill():
     
     if shouldKill.lower() == "yes":
         print("Your body seems to forget how to stay together and you fall apart into a heap of blood, bone and viscera")
+        exit()
     else:
         print("You consider your situation long and hard, before deciding that you will keep going. Until an end. ")
         
-def execute_shout():
+def executeShout():
     """A utility function , used to open the way to the cyclops lair"""
     
     global currentRoom
@@ -203,11 +213,96 @@ def hermes():
         print(currentRoom["midHelp"])
     else:
         print(currentRoom["highHelp"])
+
+def executeExamine(entity):
+        
+        global currentRoom
+        if entity == "room" :
+            print(currentRoom["examineDescription"])
+        elif entity in player["inventory"]:
+            print(entity["examineDescription"])
+        else:
+            print()
+            
+def executeBuild():
+    player["Inventory"].remove(boards)
+    player["Inventory"].remove(rope)
+    player["Inventory"].add(raft)
+    print("With the power of your hands and mind you turn the wood and rope you have gathered into a functional, albeit crude raft. ")
+            
+def executeCommand(command):
+    
+    """This function takes a command (a list of words as returned by
+    normalise_input) and, depending on the type of action (the first word of
+    the command: "go", "take", or "drop"), executes either execute_go,
+    execute_take, or execute_drop, supplying the second word as the argument.
+
+    """
+    
+    
+    if 0 == len(command):
+        return
+
+    if command[0] == "go":
+        
+        if len(command) > 1:
+            executeGo(command[1])
+        else:
+            print("Go where?")
+
+    elif command[0] == "take":
+        
+        if len(command) > 1:
+            executeTake(command[1])
+        else:
+            print("Take what?")
+
+    elif command[0] == "drop":
+        
+        if len(command) > 1:
+            executeDrop(command[1])
+        else:
+            print("Drop what?")
+            
+    elif command [0] == "build":
+        
+        if len(command) > 1:
+            executeBuild(command[1])
+        else:
+            print("Build what?")
+            
+    elif command [0] == "examine":
+        
+        if len(command) > 1:
+            executeExamine(command[1])
+        else:
+            print("Examine what?")
+            
+    elif command [0] == "shout":
+        executeShout()        
+        
+    elif command [0] == "swim":
+        executeSwim()
+        
+    elif command [0] == "kill":
+        executeKill()
+        
+    elif command[0] == "pray":
+        divineIntervention()
+        
+    elif command[0] == "help":
+        hermes()
+    
+    elif command[0] == "save":
+        save()
+    elif command[0] == "load":            
+        load()
+    else:
+        print("This makes no sense.")
         
 def save():
     
     global currentRoom
-    print(currentRoom)
     file = open("userData.txt", "w")
     for key in player:
         file.write(key + " " +  str(player[key]) + "\n")
@@ -221,9 +316,8 @@ def load():
     file = open("userData.txt", "r")
     for line in file:
         line.strip()
-        print(line)
-    
-        
+        print(line)        
+            
 
     
   

@@ -123,6 +123,13 @@ treasure = {
 
 }
 
+herring = {
+    
+    "name": "Red Herring",
+    "description": "A fair sized fish of crimson colouring"
+
+}
+
 ItemList = {
     
     "dinghy": dinghy,
@@ -141,5 +148,7 @@ ItemList = {
     "sandwich": sandwich,
     "drink": drink,
     "crisps": crisps,
-    "bow": treasure
+    "bow": treasure,
+    "herring": herring
+    
 }

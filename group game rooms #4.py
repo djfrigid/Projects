@@ -1,9 +1,10 @@
 
-Type "copyright", "credits" or "license()" for more information.
+
+#Type "copyright", "credits" or "license()" for more information.
 
 
 
->>> from items import *
+#>>> from items import *
 
 
 
@@ -32,23 +33,23 @@ print('''Out into the rain in misrable cardiff you go after reading an artical t
 
 
 
-    name - string 
+  #  name - string 
 
-    description - String 
+  #  description - String 
+#
+  #  items - list of dictionaries 
 
-    items - list of dictionaries 
+#    creatures - list of dictionaries
 
-    creatures - list of dictionaries
-
-    examine Description - String
+  #  examine Description - String
     
-    lowHelp - String - the Low WIS hint
+    #lowHelp - String - the Low WIS hint
     
-    midHelp - String - the mid WIS hint
+  #  midHelp - String - the mid WIS hint
     
-    highHelp - String - the high WIS hint
+  #  highHelp - String - the high WIS hint
 
-    exits - dictionary
+#    exits - dictionary
 
 
 
@@ -68,9 +69,9 @@ print('''Out into the rain in misrable cardiff you go after reading an artical t
 
    ' description ':'place holder string',
 
-    'items':{},
+    'items':[],
 
-    'creatures':{},
+    'creatures':[],
 
     'examine Description':'place holder string',
     
@@ -84,34 +85,6 @@ print('''Out into the rain in misrable cardiff you go after reading an artical t
 
 
 
-rooms = {
-
-	 
-    killya,
-    
-    calypsoCave,
-
-    beach,
-
-    basment,
-
-    cyclopsEntrance,
-
-    cyclops,
-
-    sirenCorridor,
-
-    sirenLair,
-
-    treasury,
-
-    circe,
-    
-    ithaca,
-
-    
-    }
-
 
 
 ithaca={
@@ -119,9 +92,9 @@ ithaca={
 
    ' description ':'place holder string',
 
-    'items':{},
+    'items':[],
 
-    'creatures':{},
+    'creatures':[],
 
     'examine Description':'place holder string',
     
@@ -129,9 +102,9 @@ ithaca={
     'midHelp' :  'place holder string',
     'highHelp' : 'place holder string',
 
-    'exits'{}
+    'exits':{}
 
-
+}
 
 calypsoCave={
 
@@ -142,7 +115,7 @@ calypsoCave={
     "description": """Boggeled minded, you arrive at a place that somewhat resembles your universitys reseption but the only diffrence is that its actaully a cave,
     on an island, in anchent greese""",
 
-    'exits'{
+    'exits':{
 
 	'east':'Cyclops entry',
 
@@ -152,19 +125,15 @@ calypsoCave={
 
 
 
-    'items':{},
+    'items':[],
 
-    'creatures':{},
+    'creatures':[],
 
     'examine Description':'place holder string',
     
     'lowHelp' :  'place holder string',
     'midHelp' :  'place holder string',
     'highHelp' : 'place holder string'
-
-    
-
-
 
 
 
@@ -185,11 +154,11 @@ creating connotations of mai tais and pineapples, here it rains and thunder seem
 
     'examineDescription':"""Time has had toll on the once great ship, it is smashed and battered. The ropes hanging from the mast are green and slippery with algae""",
     
-    'exits'{'north':'calypsoCave'}
+    'exits':{'north':'calypsoCave'},
 
-    'items':{},
+    'items':['rope'],
 
-    'creatures':{},
+    'creatures':[],
 
     
     'lowHelp' :  'place holder string',
@@ -212,7 +181,7 @@ Basement={
 
     "items": [],
 
-    'exits'{'up':'calypsoCave'},
+    'exits':{'up':'calypsoCave'},
 
      
     'creatures':[box],
@@ -253,21 +222,21 @@ circe={
         
            # '''
        
-    Panacea
+    #Panacea
 
     
 
-    'examineDescription':"""Round her supple waist is scarlet sash , she has a wildly seductive, crazy, loopy nymphetic air about her.
+    'examineDescription' :"""Round her supple waist is scarlet sash , she has a wildly seductive, crazy, loopy nymphetic air about her.
 
      Smirking and visably flatterd by your wondering eyes, she reminds you that her eyes, "are up here..."   """,
 
 
 
-    'exits'{'up':'treasury',
+    'exits':{'up':'treasury',
 
 	    'north':'ithyca',
 
-	}
+	},
     #######how does he get to island again>:?
 
 
@@ -292,14 +261,14 @@ treasury={
     "name" : "Circe's Treasury",
 
     "description": """You walked in to the treasury, candles lite up all all of a sudden! Heads of wolfs and girzzly bears decorate the walls, and the
-floor is carpeted with animal fur.`The heads seem to still posses the souls of the animals as if they are watching over the safe.
-There is a gold door, the door doesn’t have a lock."""
+floor is carpeted with animal fur.`The heads seem to still posses the souls of the animals still watching over the safe.
+There is a gold door, the door doesn’t have a lock.""",
 
 
-    'examineDescription':'A plain safe in the corner requires a 4 digits to unlock'
+    'examineDescription':'A plain safe in the corner requires a 4 digits to unlock',
     
 
-    'exits'{'down':'Circe'}
+    'exits':{'down':'Circe'},
 
 
     'items':[],
@@ -321,14 +290,14 @@ cyclopsEntrance = {
 
 	"name" : "Professor Polys office",      
 
-	"description": "Up a short flight of stairs,' Professor Polyphemus's Office' reads on a semi translucent door in bold black letters outlined in gold. """ 
+	"description": "Up a short flight of stairs,' Professor Polyphemus's Office' reads on a semi translucent door in bold black letters outlined in gold. """ ,
 
-        "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting. """#######how do you know the shout command?>?/???
+        "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting. """,#######how do you know the shout command?>?/???
                                                                                                                         # "items":"something to awaken the poly...? 
 
         'exits':{'south':'cyclops',
 
-	         'east':'calypsoCave'}
+	         'west':'calypsoCave'},
 
 
     'items':[],
@@ -355,7 +324,7 @@ cyclops = {
 
         An eyepatch clings to his skin, inset into his gaping cavernous eyesocket and A powerful rhythmic resonance of polys formidable heart thunderers rumblingly,
 
-        causing the ground and the lofty walls of the office to vibrate and tremble."""
+        causing the ground and the lofty walls of the office to vibrate and tremble.""",
 
         #'me want you is go get me my glass eye is lost hicup'
 
@@ -363,7 +332,7 @@ cyclops = {
 	"items": [umberella, earbuds, dinghy],
 
 
-	"creatures" : [cyclops]###why is this i square braks??                                          
+	"creatures" : [cyclops],###why is this i square braks??                                          
 
 
         'exits':{'north':'cyclopsEntrance'},
@@ -390,7 +359,8 @@ sirenCorridor = {
 
 	"description": """The relentless Cardiffian rain has flooded the corridor and only the tip tap of the water seeping through the cracks in the roof break the silence.
 
-                        You can just about make out the far end where two men are wearing ear protectors.  There is an pungent smell of rotting flesh seemingly coming from the depths of the water.
+                        You can just about make out the far end where two men are wearing ear protectors.
+                        There is an pungent smell of rotting flesh seemingly coming from the depths of the water.
 
                             """,
 
@@ -402,13 +372,13 @@ sirenCorridor = {
 
     
 
-    "examineDescription":"A red herring swims in circles after its own tail."   ### how does this exit work if no earbuds
+    "examineDescription":"A red herring swims in circles after its own tail." ,  ### how does this exit work if no earbuds
 
     'exits':{
 
 	    'north':'Circe'
 
-	    }
+	    },
     
 
     
@@ -429,10 +399,11 @@ sirenLair = {
 
         
 
-	"description": """you wade into the cold water fearlesy with images of Ithica in your mind. You see girls bathing in the water red liped and doe eyed creatures dressed provocatively in blue red and white skirts.
+	"description": """You wade into the cold water fearlesy with images of Ithica in your mind. You see girls bathing in the water red liped and doe eyed creatures dressed provocatively in blue red and white skirts.
 
-	The little light there reflects of firm pouting breasts and their lustrus song pollutetes your mind with desire as you paddle furiously in their direction.   """
-
+	The little light there reflects of firm pouting breasts and their lustrus song pollutetes your mind with desire as you paddle furiously in their direction.
+	The foulest stench is in the air, and they close in to seal your doom, no mere mortal can resist,  """,
+                                                                                                        # impregnating thier womb?
 	"items": [],
 
 	"creatures" : [sirens],
@@ -446,13 +417,67 @@ sirenLair = {
     
     'lowHelp' :  'place holder string',
     'midHelp' :  'place holder string',
-    'highHelp' : 'place holder string',
+    'highHelp' : 'place holder string'
 
 
 }
+kryllafight={
+    'name':'''Encounter with Kirill '''
+
+   ' description ': ''' The door off the safe flings open and a whirlwind of air compleatly messing up your hairdoo. Soon the swirling wind dies down reveling a bow.''',
+
+    ## take bow should print.... ()
+
+    'items':[],
+
+    'creatures':['krylla'],
+
+    'examine Description':'place holder string',
+    
+    'lowHelp' :  'place holder string',
+    'midHelp' :  'place holder string',
+    'highHelp' : 'place holder string',
+
+    'exits'{}
+    
+    
+         }
+
+
+
+
+
+rooms = [
+
+	 
+    kryllafight+,
+         
+    calypsoCave,
+
+    beach,
+
+    basment,
+
+    cyclopsEntrance,
+
+    cyclops,
+
+    sirenCorridor,
+
+    sirenLair,
+
+    treasury,
+
+    circe,
+    
+    ithaca
+
+    
+    ]
+
   
 
 
-Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
-SyntaxError: invalid syntax
->>> 
+#Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
+#SyntaxError: invalid syntax
+#>>> 

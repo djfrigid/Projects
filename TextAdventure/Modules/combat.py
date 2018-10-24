@@ -26,8 +26,9 @@ def combat(monster):
             
             if toHitm >= monster["DEX"]:
                 
-                playDamage = random.randint(1,player["STR"])
-                monster["CON"] -= playDamage
+                playDamage = random.randint(1,player["STR"])               
+                monster["CON"] -= playDamage                
+
                 print("You deal " + str(playDamage) + " damage to the " + monster["name"] + "\n")
             
             else:
@@ -43,27 +44,42 @@ def combat(monster):
                 
                 print("You strike your opponent in the knee and hear a satisfying crunch. They hobble clear, favouring the undamaged leg ")
                 player["STA"] -= 3
-                monster["DEX"] -= 1
+                if monster["DEX"] > 2:
+                    monster["DEX"] -= 1
+                else:
+                    monster["DEX"] = 2
                 
             elif determinant == 1:
                 
                 print("You grab your opponents arm and wrench, being rewarded with the sharp crack of breaking bone. The limb hangs uselessly at their side, out of the fight")
                 player["STA"] -=1
-                monster["STR"]-=1
+                if monster["STR"] > 2:
+                    monster["STR"]-=1
+                else:
+                    monster["STR"] = 2
                 
             elif determinant == 2:
                 
                 print("You jab your fingers into your opponents face , gouging deep into an eye. They twist away, leaving your fingers coated in blood and jelly... and them now half blind")
                 player["STA"] -=1
-                monster["DEX"]-=2
+                if monster["DEX"] > 3:
+                    monster["DEX"]-=2
+                else:
+                    monster["DEX"] = 2
                 monster["CON"]-=3
                 
             elif determinant == 3:
                 
                 print("You throw your opponent to the ground and smash their skull down one,two,three times before you are forced away. Blood leaks from the side of their head and their eyes have a glazed over look ")
                 player["STA"] -= 1
-                monster["STR"] -= 1
-                monster["DEX"] -= 1
+                if monster["STR"] > 2:
+                    monster["STR"] -= 1
+                else:
+                    monster["STR"] = 2
+                if monster["DEX"] > 2:
+                    monster["DEX"] -= 1
+                else:
+                    monster["DEX"] = 2
                 monster["CON"] -= 2
                 
             elif determinant == 4:
@@ -112,8 +128,7 @@ def combat(monster):
             print("---------------------------------")
             
             if monsters["box"] == monster:
-                print("The box shatters into pieces, several to be good sturdy planks, you take them, confident they will be of use.")
-                player["inventory"].append(itemList["planks"])
+                player["inventory"].append(planks)
 
                 
         

@@ -98,7 +98,7 @@ ithaca={
     been as kind to you, she is doubtful of your claim to be her Ulysses. She asks you to recount details of your
     journey, the Gods will tell her if you are being truthful.
 
-    'If you are my darling Ulysses, then you will answer me three questions.'
+    'If you are my darling Ulysses, then you will answer me this:'
 
     'What do Cerce's sash, a lonely fish, and the skirts of the Sirens have in common?'
 

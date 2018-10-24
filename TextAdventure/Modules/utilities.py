@@ -236,18 +236,13 @@ def executeShout():
     """A utility function , used to open the way to the cyclops lair"""
     
     global currentRoom
-    global shouted 
-    
-    print("You yell as loud as you can, the reverberation of the echoes making the illusion that entire empire has just shouted.  ")
-    
     if currentRoom == rooms["cyclopsEntrance"]:
-        shouted = True
+        print("You yell as loud as you can, the reverberation of the echoes making the illusion that entire empire has just shouted.  ")
         print("You don't hear as much as you feel the cyclops rise from his slumber and heft several large heavy bars that previously prevented the door from functioning. ")
+        rooms["cyclopsEntrance"]["exits"] = {'west':'calypsoCave','south':'cyclops'}
     else:
-        print("despite the volume of your cry, nothing seems to react to it. ")
+        print("Despite the volume of your cry, nothing seems to react to it. ")
         
-    return shouted 
-
    
 def hermes():
     
@@ -367,7 +362,6 @@ def executeCommand(command):
     normalise_input) and, depending on the type of action (the first word of
     the command: "go", "take", or "drop"), executes either execute_go,
     execute_take, or execute_drop, supplying the second word as the argument.
-
     """
     
     global currentRoom
@@ -443,9 +437,3 @@ def executeCommand(command):
     else:
         print("This makes no sense.")
 
-
-
-
-    
-  
-    

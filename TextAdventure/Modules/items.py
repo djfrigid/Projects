@@ -150,7 +150,7 @@ ItemList = {
     "rope": rope,
     "raft": raft,
     "Coccyx": tailbone,
-    "boat instructions": boatInstructions,
+    "instructions": boatInstructions,
     "ring": booster1,
     "L": letterL,
     "panacea": panacea,

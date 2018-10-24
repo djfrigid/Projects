@@ -15,10 +15,10 @@ player = {
     "STR" : 50,
     "DEX" : 50, 
     "CON" : 50,
-    "WIS" : 50,
+    "WIS" : 5,
     "STA" : 50, 
     "MAXCON"  : 10, 
-    "inventory" : [sandwich, drink, crisps, tailbone]
+    "inventory" : [sandwich, drink, crisps, tailbone, integrity, dinghy]
     
     
         

@@ -21,16 +21,21 @@ def create():
         
         choice = input(">")
         
+        number = int(input("And how many points?"))
+        
+        if availablePoints - number < 0:
+            print("you cannot assign that many points. You only have " + str(availablePoints) + " remaining")
+        
         if choice == "STR":
-            player["STR"] +=1
+            player["STR"] += number
         elif choice == "DEX":
-            player["DEX"]+=1
+            player["DEX"]+= number
         elif choice == "WIS":
-            player["WIS"]+=1
+            player["WIS"]+= number
         elif choice == "STA":
-            player["STA"]+=1
+            player["STA"]+= number
         elif choice == "CON":
-            player["CON"]+=1
+            player["CON"]+= number
         else: 
             print("That's not an aspect of yourself, unless of course you are being a deliberate pain.You don't need to improve on that ")
     

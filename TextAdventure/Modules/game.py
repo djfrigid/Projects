@@ -12,6 +12,8 @@ from combat import *
 from entities import *
 from utilities import *
 from rooms import *
+import winsound 
+from winsound import PlaySound
 
 def checkCave():
     
@@ -22,9 +24,9 @@ def checkCave():
 
             'down':'basement',
 
-            'south':'beach',}
+            'south':'beach'}
         
-    elif dinghy in player["inventory"]:
+    if dinghy in player["inventory"]:
         rooms["calypsoCave"]["exits"] =  {
             
             'east':'cyclopsEntrance',
@@ -60,10 +62,14 @@ def checkExits():
 
 def main():
     
-    
+
+    #  winsound.PlaySound("Sound.wav", winsound.SND_FILENAME and winsound.SND_LOOP) 
+     
     
     while True:
         
+        
+                    
         checkExits()
         
         action = input("> ")

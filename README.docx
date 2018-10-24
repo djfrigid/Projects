@@ -11,7 +11,8 @@ example dictionary = {
   "weight" : "a third value" (note no comma here as this is the final value)
 }
 
-Implement conditional blocks for:: siren corridor to siren lair: Circe to icatha: Circe to Kyrla:icatha to Circe.
+
+Implement conditional blocks for:: siren corridor to siren lair: Circe to icatha: Circe to Kyrla
 ensure siren lair works
 
 SPELLING
@@ -21,7 +22,7 @@ SPELLING
 
 
 Suitor fight
-remove load and save or *see conditional
+remove load and save
 fix potential travel bugs
 fix bug where initiating a fight after loading crashes the game
 double boss

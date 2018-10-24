@@ -74,7 +74,8 @@ ithaca={
 
      'items':[],
   
-    'examineDescription':'''Young men have taken over your dining hall and Barbequed all your pigs and have drunk all your wine the swine's''',
+    'examineDescription':'''    Young men have taken over your dining hall and Barbequed all your pigs and have drunk 
+    all your wine the swine's''',
     
     'lowHelp' :  'Its really not that difficult just go and check them out again stupid.',
     'midHelp' :  'Who thought that herring might be useful in the end?',
@@ -91,7 +92,8 @@ calypsoCave={
 
     "description": """  Your mind boggled, you arrive at a place that somewhat resembles your university's 
     reception, the only difference is that it's actually a cave, on an island, in Ancient Greece.
-    A bottle hits your head and although youâ€™re somewhat disappointed that itâ€™s not wine, between the shattered glass you find something with some Instructions written on it.
+    A bottle hits your head and although you're somewhat disappointed that itâ€™s not wine, between the shattered 
+    glass you find something with some Instructions written on it.
     _____________________________________________
     |  | '' '  /        |'' ' |      \'  ' '|     |
     |   \' '  /         |' '' /       | ' ''/     |
@@ -118,11 +120,11 @@ calypsoCave={
     'creatures':[],
 
     'examineDescription':'''Around about the cave there grows luxuriant wood, alder and sweet-smelling cypress,
-    where birds long of wing go to nest. Bats fly by you out of the basement downstairs towards the orange sky and
+    where birds long of wing go to nest. Bats fly by you out of the basement downstairs north towards the orange sky and
     Owls, falcons and sea-crows with chattering tongues ply their business on the sea. ''',
     
     'lowHelp' :  'I hear the beach is horrible this time of year.',
-    'midHelp' :  'There are 3 exits from this island',
+    'midHelp' :  'There are 4 exits from this island',
     'highHelp' : 'Perhaps with the items you find here you will be able to escape!',
 
     'exits':{'east':'cyclopsEntrance','down':'basement',"north" : "sirenCorridor",'south':'beach'}
@@ -300,8 +302,9 @@ treasury={
 
     'examineDescription':'A plain safe in the corner requires a 4 digit code to unlock',
 
-    'lowHelp' :  'There are only 10,000 options you have to go through really... or perhaps its hidden somewhere and you missed it. ',
-    'midHelp' :  """Letâ€™s just say the images of the rooms weren't added because of the impressive graphics""",
+    'lowHelp' :  '''There are only 10,000 options you have to go through really... or perhaps its hidden 
+    somewhere and you missed it.''',
+    'midHelp' :  """Let's just say the images of the rooms weren't added because of the impressive graphics""",
     'highHelp':  'The code is hidden in the rooms, but you must look carefully',
 
     'exits':{'down':'circe'}
@@ -383,11 +386,13 @@ cyclops = {
 
     "creatures" : [cyclops],                                         
 
-    'examineDescription':'Poly now blinded and knocked out, you decide to snoop around his office. You notice he has some earplugs in his ears and a plastic dinghy in the corner.',
+    'examineDescription':''''Poly now blinded and knocked out, you decide to snoop around his office. You notice 
+    he has some earplugs in his ears and a plastic dinghy in the corner.''',
 
     'lowHelp' :  'Kleptomania might be bad but hey you need to get to you lecture.',
     'midHelp' :  '''I know it's kind of disgusting, but you got to do what you got to do.''',
-    'highHelp' : 'That raft probably wont last much longer to be honest, and those things might be stupid but hey they are basically free.',
+    'highHelp' : '''That raft probably wont last much longer to be honest, and those things might be stupid but hey 
+        they are basically free.''',
 
     'exits':{'north':'cyclopsEntrance'}
 }
@@ -396,7 +401,8 @@ sirenCorridor = {
 
     "name": "The Long Corridor",
 
-    "description": """  The relentless Cardiffian rain has flooded the corridor and only the tip tap of the  water seeping through the cracks in the roof breaks the silence.
+    "description": """  The relentless Cardiffian rain has flooded the corridor and only the tip tap of the  water 
+    seeping through the cracks in the roof breaks the silence.
     You can just about make out the far end where two men are wearing ear protectors. There is a pungent 
     smell of rotting flesh seemingly coming from the depths of the water.
     ______________________________________________
@@ -479,9 +485,12 @@ sirenLair = {
 kryllafight={
     'name':'''Encounter with Kirill ''',
 
-    'description':'''Krylla is colossal aquatic giant of such great volume that according to Archimedes, you could see the water of the lake Como
-rise with your naked eye if it was teleported into its depths and its glaring red eyes could drive any man to madness.
-Good luck I can only hope you have the contence of the safe in the treasurey''',
+    'description':'''Krylla is a colossal aquatic giant of such great volume that according to Archimedes, you could 
+    see the waters of the lake Como rise with your naked eye as he rises from its depths.
+    
+    It's glaring red eyes could truly drive any man to madness.
+    
+    Good luck I can only hope you have the contence of the safe in the treasurey''',
 
 
 
@@ -496,7 +505,8 @@ Good luck I can only hope you have the contence of the safe in the treasurey''',
     'examineDescription':'',
     
     'lowHelp' :  'Try and Stay alive',
-    'midHelp' :  '''If you are feeling this is a fight you can acually win, i recommend trying to read 'The Art of War' to make sure you have a chance ''',
+    'midHelp' :  '''If you are feeling this is a fight you can acually win, i recommend trying to read 'The Art of War' 
+    to make sure you have a chance ''',
     'highHelp' : "Im sorry kiddo cant help you in here I'm afraid...",
     'exits':{},
 }

@@ -223,7 +223,6 @@ def executeGo(direction):
         printRoom()
         print()
         
-        
     else:
         print("No, You cannot go there")
         
@@ -234,6 +233,8 @@ def executeGo(direction):
     elif currentRoom == rooms["sirenLair"] and foughtSiren == False:
         combat(siren)
         foughtSiren = True
+    elif currentRoom == rooms["blackhole"] and itemList["earplug"] not in player["inventory"]:
+        print(123123123)
     elif foughtCyclops == False and currentRoom == rooms["cyclops"]:
         combat(monsters["cyclops"])
         foughtCyclops = True

@@ -1,9 +1,18 @@
 """This file is for functions relating to the combat system"""
 
 import random
-from entities import player
+from entities import *
+from items import *
+from rooms import rooms
 
 def combat(monster):
+    
+    print(monster)
+    
+    
+    if monster == monsters["cyclops"] and umbrella in player["inventory"]:
+        print("You stab Poly in his eye with the tip of the umbrella. He roars in pain and collapses into a ball, cradling his ruined face.")
+        monster["CON"] = 0
 
     while player["CON"] >= 0 and monster["CON"] >= 0 :
     
@@ -80,9 +89,14 @@ def combat(monster):
                 
         toHitp = random.randint(1,10) - player["DEX"]    
         if toHitp >= player["DEX"]:
-            enemDamage = random.randint(1,monster["STR"])        
-            player["CON"] -= enemDamage
-            print("You take " + str(enemDamage) + " damage from the " + monster["name"] + "\n")
+            if monster["STR"] > 1:
+                
+                    enemDamage = random.randint(1,monster["STR"])        
+                    player["CON"] -= enemDamage
+                    print("You take " + str(enemDamage) + " damage from the " + monster["name"] + "\n")
+                
+            else:
+                    print("You are hit, but take no damage")
         else:
             print("The " + monster["name"] + " tries to hit you, but you dodge out of the way" + "\n")
         
@@ -95,6 +109,9 @@ def combat(monster):
             print("---------------------------------")
             print("With a mighty blow, you defeat the " + monster["name"]) #change the flavourtext here 
             print("---------------------------------")
+            
+            if monsters["box"] == monster:
+                player["inventory"].append(planks)
 
                 
         

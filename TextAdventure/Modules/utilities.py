@@ -1,11 +1,11 @@
 import re
 import random
-import time
 from items import *
+from entities import *
 from rooms import *
-from config import currentRoom
-
-
+from combat import combat
+currentRoom = rooms["calypsoCave"]
+import time
 
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'bad', 'beautiful', 'been', 'better', 'big', 'can', 'every', 'for',
@@ -38,13 +38,11 @@ def normaliseInput(userInput):
 
     noPunct = makeSense(userInput).lower()
 
-    iwords = [] 
-
-    iwords = re.sub(r"[^\w]", " ",  noPunct).split()
+    rwords = re.sub(r"[^\w]", " ",  noPunct).split()
     
-    iwords = filterWords(iwords, skip_words)
+    qwords = filterWords(rwords, skip_words)
     
-    return iwords
+    return qwords
 
 def divineIntervention(): #this as present can be abused , consider adding a penalty
     prayer = random.randint(0,100)
@@ -53,114 +51,141 @@ def divineIntervention(): #this as present can be abused , consider adding a pen
         print("You fall to your knees in prayer, petitioning the gods for aid... They ignore you.")
     elif prayer in range(51,56):
         print("You fall to your knees in prayer, petitioning the gods for aid... you are answered ")
+        player["CON"] = player["MAXCON"]
     elif prayer in range(56,61):
         print("δεν μπορείτε να διαβάσετε αυτό το ... εκτός αν υποθέτω ο Έλληνας σας. Ωστόσο, αν μπορείτε, κρατήστε αυτό για τον εαυτό σας.")
     elif prayer in range(61,66):
-        print("") #joke -mu
+        print("You fall to your knees in prayer, petitioning the gods for aid... Four apples, five grapes, no bananas and one pear") 
     elif prayer in range(66,71):
-        print("") #joke -mu
+        print("You fall to your knees in prayer, petitioning the gods for aid... Realisation that the cyclops is a liar dawns upon you.") #joke -mu
     elif prayer in range(71,76):
         print("You fall to your knees in prayer, petitioning the gods for aid... Your pocket grows strangely heavy and starts wriggling, emitting a slew of eey-ooh's. ") #joke -joke item
+        player["inventory"].append(ass)
     elif prayer in range(76,81):
-        print("")#joke - visual appealing
+        print("The blurred image of the woman you love appears before you. , ")#joke - visual appealing - woman 'Ithica'
+        print("""
+         ......................$$I:?.............
+         .....................B:....~............
+         ....................$I~..T,I+...........
+         ....................OIT?....+...........
+         ....................TB==I...~...........
+         ...................:?NI=I:,,=,..........
+         ...................:+D$T?~+T?...........
+         ..................,I?+O==,:$:,..........
+         .................:IT?Z?::,,.~IO,,.......
+         ...........,..,,=:IT+IT?.,.=,.,,.,.,....
+         .............,,=++?TI??+..~.,,,,,,,,,,,,
+         ,.,,.......,..,?$TII?Z?::,,,,,.,,,,,,,,,
+         ,,,,..,...,,,,,?I$?I=T?:~~,,,,,,~~,,,,,,
+         ,,,,,,,,,,,,,,,IT$?$IT?::~:,,,,,~~:,,,,,
+            """)
     elif prayer in range(81,86):
         
         d2 = random.randint(0,2)
         if d2 == 0:
-            print()# insert flavourtext here
+            print("You fall to your knees in prayer, petitioning the gods for aid... A sudden jolt of energy strikes through you and you feel as if you have reached a new plateau.")# insert flavourtext here
             player["CON"] += 2
         else:
+            print("You fall to your knees in prayer, petitioning the gods for aid... You suddenly feel exahusted and more vulnerable.")
             player["CON"] -= 1
             
     elif prayer in range(86,91):
-        print("") #
+        print("You fall to your knees in prayer, petitioning the gods for aid... You feel refreshed as a wave of calmness washes over you.") 
+        player["STA"] += 2
     elif prayer in range(91,96):
         print("You fall to your knees in prayer, petitioning the gods for aid... Your prayer is answered, your mind filling with forbidden knowledge.") #useful - restores some hints
+        player["WIS"] += 1
     elif prayer in range(96,101):
         print("You fall to your knees in prayer, petitioning the gods for aid... and your prayers are answered. You feel a warm energy suffuse through your body before it turns blindingly hot and you are burned to a cinder by divine power ")
         exit()
-        #death
+#death
 
 
-def executeTake(item_id):
-    """This function takes an item_id as an argument and moves this item from the
+def executeTake(item):
+    """This function takes an item as an argument and moves this item from the
     list of items in the current room to the player's inventory. However, if
     there is no such item in the room, this function prints
     "You cannot take that."
     """
-    taken = False
-
+    
     for i in currentRoom["items"]:
         
-        global maxWeight
-        global carryWeight
+        if i["id"] == item:
+            player["inventory"].append(ItemList[item])
+            currentRoom["items"].remove(ItemList[item])
         
-        prospectWeight = carryWeight + i["mass"]
-        
-        if prospectWeight > maxWeight:
-            canTake = False
         else:
-            canTake = True
+            print("You cannot take that")
         
-        if item_id == i["id"] and canTake == True :
-            store = i
-            currentRoom["items"].remove(i)
-            player["inventory"].append(store)
-            taken = True
-            carryWeight = prospectWeight
-            
-    if taken == False:
-        print()
-        print("You cannot take that")
-
-def executeDrop(itemId):
+def executeDrop(item):
     
-    """This function takes an item_id as an argument and moves this item from the
+    """This function takes an item as an argument and moves this item from the
     player's inventory to list of items in the current room. However, if there is
     no such item in the inventory, this function prints "You cannot drop that."
     """
     
-    global carryWeight
-    
-    
-    dropped = False
     for i in player["inventory"]:
-        if itemId == i["id"]:
+        
+        if item == i["id"]:
             store = i
             player["inventory"].remove(i)
             currentRoom["items"].append(store)
-            dropped = True
-            carryWeight -= i["mass"]
+        else:
+            print("You cannot drop that")
             
     
-    if dropped == False:
-        print()
-        print("You cannot drop that")
+   
+def isValidExit(exits, exitChoice):
+    
+    return exitChoice in exits     
+
+def printRoom():
+    
+    global currentRoom
         
-        
-        
+    name = currentRoom["name"].upper()
+    
+    print()
+    
+    description = currentRoom["description"]
+    
+    print(name.upper())
+    print()
+    print(description)
         
 def executeGo(direction):
     
-    """This function, given the direction (e.g. "south") updates the current room
+    """This function, given
+    the direction (e.g. "south") updates the current room
     to reflect the movement of the player if the direction is a valid exit
     (and prints the name of the room into which the player is
     moving). Otherwise, it prints "You cannot go there."
     """
+   
     global currentRoom
-    
-    print(currentRoom)
+    foughtBox = False
+    foughtSiren = False 
+    foughtCyclops = False
     
     if isValidExit(currentRoom["exits"], direction):
-        print(currentRoom)
+
         currentRoom = rooms[currentRoom["exits"][direction]]
+        printRoom()
+        print()
+        
     else:
         print("No, You cannot go there")
-
-def isValidExit(exits, exitChoice):
+        
+        
+    if currentRoom == rooms["basement"] and foughtBox == False:
+        combat(box)
+        foughtBox = True
+    elif currentRoom == rooms["sirenLair"] and foughtSiren == False:
+        combat(siren)
+        foughtSiren = True
+    elif foughtCyclops == False and currentRoom == rooms["cyclops"]:
+        combat(monsters["cyclops"])
     
-    return exitChoice in exits
-
         
 def executeSwim():
     """Joke function . If the player has sufficient wisdom they will realize its a bad idea and lose a wisdom point. If they aren't wise enough they go into the sea and die. """
@@ -218,19 +243,78 @@ def hermes():
 
 def executeExamine(entity):
         
+        
         global currentRoom
         if entity == "room" :
             print(currentRoom["examineDescription"])
         elif entity in player["inventory"]:
-            print(entity["examineDescription"])
+            print(ItemList[entity]["description"])
         else:
             print()
             
-def executeBuild():
-    player["Inventory"].remove(boards)
-    player["Inventory"].remove(rope)
-    player["Inventory"].add(raft)
+def executeBuild(boat):
+    player["inventory"].remove(planks)
+    player["inventory"].remove(rope)
+    player["inventory"].append(raft)
     print("With the power of your hands and mind you turn the wood and rope you have gathered into a functional, albeit crude raft. ")
+   
+def save():
+    
+    global currentRoom
+    print(currentRoom)
+    file = open("userData.txt", "w")
+    for key in player:
+        file.write(str(player[key]) + "\n")
+    
+    for key in currentRoom:
+        file.write(str(currentRoom[key]) + "\n")
+    file.close()
+    
+def load():
+    LoadList = []
+    global currentRoom
+    file = open("userData.txt", "r")
+    for line in file:
+        line = re.sub(r"[\n]","",line)
+        LoadList.append(line)
+
+    print(LoadList)
+    
+    player["name"] = LoadList[0]
+    player["STR"] = LoadList[1]
+    player["DEX"] = LoadList[2]
+    player["CON"] = LoadList[3]
+    player["WIS"] = LoadList[4]
+    player["STA"] = LoadList[5]
+    player["inventory"] = LoadList[6]
+    player["MAXCON"] = LoadList[7]
+
+    if LoadList[8] == "Calypso's cave":
+        currentRoom = rooms["calypsoCave"]
+    elif LoadList[8] == "Calypso's island":
+        currentRoom = rooms["beach"]
+    elif LoadList[8] == "The Basement":
+        currentRoom = rooms["basement"]
+    elif LoadList[8] == "Circe's Mansion":
+        currentRoom = rooms["Circe"]
+    elif LoadList[8] == "Circe's Treasury":
+        currentRoom = rooms["treasury"]
+    elif LoadList[8] == "Professor Poly's office":
+        currentRoom = rooms["cyclopsEntrance"]
+    elif LoadList[8] == "Cave of the Cyclops":
+        currentRoom = rooms["cyclops"]
+    elif LoadList[8] == "The Long Corridor":
+        currentRoom = rooms["sirenCorridor"]
+    elif LoadList[8] == "Cheerleading practice room":
+        currentRoom = rooms["sirenLair"]  
+        
+def inventory():
+    
+    print("You are currently carrying:")
+    
+    for key in player["inventory"]:
+        print(key["name"])
+        
             
 def executeCommand(command):
     
@@ -241,6 +325,7 @@ def executeCommand(command):
 
     """
     
+    global currentRoom
     
     if 0 == len(command):
         return
@@ -295,12 +380,19 @@ def executeCommand(command):
     elif command[0] == "help":
         hermes()
     
+    elif command[0] == "load":
+        load()
+        
     elif command[0] == "save":
         save()
-    elif command[0] == "load":            
-        load()
+    
+    elif command[0] == "inventory":
+        inventory()
+    
     else:
         print("This makes no sense.")
+
+
 
 
     

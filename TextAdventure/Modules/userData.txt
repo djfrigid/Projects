@@ -1,7 +1,17 @@
-name Ulysses
-STR 5
-DEX 5
-CON 5
-WIS 5
-STA 5
-Inventory []
+Ulysses
+5
+5
+5
+5
+7
+['rope']
+Calypso's island
+Professor Polys office
+Up a short flight of stairs,' Professor Polyphemus's Office' reads on a semi translucent door in bold black letters outlined in gold. 
+The top of the doorway seems to be worn, perhaps by some unintentional headbutting. 
+{'south': 'cyclops', 'west': 'calypsoCave'}
+['rope']
+[]
+What command could help you now?
+open sesime would proberly work if you said it load enogh
+Try and twist and shout, just without the twist

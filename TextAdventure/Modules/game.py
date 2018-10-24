@@ -12,20 +12,21 @@ from combat import *
 from entities import *
 from utilities import *
 from rooms import *
-from config import *
+
 
 def main():
-
+    
+    
     while True:
         
-        printRoom(currentRoom)
         
         action = input("> ")
         
         command = normaliseInput(action)
-
+        
         executeCommand(command)
-
+        
+        
 if __name__ == "__main__":
     main()
 
@@ -44,6 +45,9 @@ Help - Hermes -c
 Shout 
 Swim
 Kill
+Save
+Load
+Inventory
 
 
 

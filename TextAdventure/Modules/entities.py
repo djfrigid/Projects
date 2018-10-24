@@ -10,11 +10,11 @@
 player = {
     
     "name" : "Ulysses", 
-    "STR" : 5,
-    "DEX" : 5, 
-    "CON" : 5,
-    "WIS" : 5,
-    "STA" : 5, 
+    "STR" : 50,
+    "DEX" : 50, 
+    "CON" : 50,
+    "WIS" : 50,
+    "STA" : 50, 
     "inventory" : []
         
 }
@@ -43,4 +43,13 @@ cyclops = {
     "STR":7,
     "DEX":1,
     "CON":30    
+}
+
+monsters = {
+    
+    "box": box,
+    "siren": siren,
+    "cyclops": cyclops    
+    
+    
 }

@@ -115,8 +115,28 @@ calypsoCave={
 
     "name" : """Calypso's cave""",
 
-    "description": """Your mind boggled, you arrive at a place that somewhat resembles your university's 
-    reception, the only difference is that it's actually a cave, on an island, in Ancient Greece""",
+    "description": """  Your mind boggled, you arrive at a place that somewhat resembles your university's 
+    reception, the only difference is that it's actually a cave, on an island, in Ancient Greece
+    _____________________________________________
+    |  | '' '  /        |'' ' |      \'  ' '|     |
+    |   \' '  /         |' '' /       | ' ''/     |
+    |    \ ''|  	\ '' /	      \' ' |      |	      
+    |     |  /           \ '|          \' /       | 
+    |      \/             | /           \/       |
+    |                     \/                     |
+    |                                            |
+    |                           # #### ####      |
+    |                         ### \/#|### |/#### |
+    |                        ##\/#/ \||/0#/_/##/_|
+    |                       ###  \/###|/4\/ # ###|
+    |                    ##_\_#\_\## | #5###_/_##|
+    |       \. _(9>     ## #### # \ #| /1 #### ##|
+    |        \==_)       __#_--###`  |{,###---###|
+    |  _______-'=___________       \ }{          |
+    |  |    [Reception]    |        }}{          |
+    |  |                   |        }}{          |
+    |  |___________________|        {{}          |        
+    |                         , -=-~{ .-^- _     |""",
 
     'exits':{
 
@@ -154,9 +174,29 @@ beach={
 
     "name" : """Calypso's island""",
 
-    "description": """You walk down to a bay but far from the Caribbean sandy beaches creating images of
+    "description": """  You walk down to a bay but far from the Caribbean sandy beaches creating images of
     mai tais and pineapples, here it rains and thunder seems to have charred the skull and bones flag 
-    atop the mast of pirate ship""",
+    atop the mast of pirate ship
+    _____________________________________________
+    |                                            |
+    |           4                                |
+    |                      1                     |          				     
+    |                5                           |
+    |  0                                         |       
+    |                         _\/_               |
+    |          _              //o\  _\/_         |
+    |__ __ ___(_)_ __ __ ____ _ | __/o\\ _        |
+    |_=_-=-=-_-__=_-= _=_=-=_,-'|"'""-|-,_       |
+    |--_- =- _=-=- -_=-=_,-"  /|      |          |
+    |-_ -=- =- =- -=.--"     / |      __     .   |
+    |_=-=-_-_=-=_,-"        /__|__               |
+    |-=_-_=-=_,-"         \--------/       .     |
+    | -_=_,-"                                    |
+    |=_-"		__                  __   |
+    |-"    .                  .                  |
+    |            .                    .     .    |
+    |                        __          __      |
+    |   __                                       |""",
 
 
 
@@ -185,9 +225,29 @@ basement={
 
     "name" : "The Basement",
 
-    "description": """Cobwebs and dust have replaced the white paint here. Against one of the walls is 
+    "description": """  Cobwebs and dust have replaced the white paint here. Against one of the walls is 
     a wooden crate that glares at you threateningly...
-    You clench your fists preparing for a showdown...""",
+    You clench your fists preparing for a showdown...
+    _____________________________________________
+    | ## #  |                         ## #       |
+    |  ## # | [0451]      __.--'-.   ####        |
+    |##  #  |       __.--'        `-. ##         |		     
+    |       | __.--'                 `-          |
+    |       ||.                  __.--||         |
+    |       |||`-.         __.--'     ||         |
+    |       |||   `- __.--'           ||         |   
+    |       |||    |||                ||         |
+    |       |||    |||                ||_________|
+    |       |||    |||                ||         |
+    |       /||    |||                ||         |
+    |      / ||    |||                ||         |
+    |     /  ||    |||                ||         |
+    |    /   ||    |||           __.--'          |
+    |   /      `-. |||     __.--'                |
+    |  /          `-||_.--'                      |
+    | /                                          |
+    |/                                           |
+    |                                            |""",
 
     "items": [],
 
@@ -202,7 +262,7 @@ basement={
     'midHelp' :  'Perhaps with the items you find here you will be able to escape!',
     'highHelp' : 'Try and think inside the box'
 
-  
+
 
 }
 
@@ -216,7 +276,7 @@ circe={
 
     "name" : """Circe's Mansion""",
 
-    "description": """The Mansion you arrive at boasts grand white marble columns and suspiciously 
+    "description": """  The Mansion you arrive at boasts grand white marble columns and suspiciously 
     colourful flowers placed seemingly at random around the front room. 
 
     Walking gracefully down the stairs one hand running down the balcony, wearing a long white silk 
@@ -224,7 +284,27 @@ circe={
 
     Following her are three abnormally large ginger tabby cats that lay down lazily by the roaring fire.
     Displayed in the centre of the room, a life size bronze piggy bank with a
-    terrified expression.""",
+    terrified expression.
+    _____________________________________________
+    |                           (_,.....,_)      |
+    |                             |||||||        | 
+    |             w*W*W*W*w       |||||||        | 
+    |              \"."."/        |||||||        |
+    |               //`\\         |||||||        |
+    |              (/- -\)        |||||||        |
+    |              (\_-_/)        |||||||        |
+    |             .-~'='~-.       |||||||        |
+    |            /`~`"Y"`~`\      |||||||        |
+    |           / /(_ * _)\ \     |||||||        |
+    |          / /  )   (  \ \    |||||||        |
+    |          \ \_/\\_//\_/ /    |||||||        |
+    |           \/_) '*' (_\/     |||||||        |
+    |             |       |       |||||||        |
+    |          _;_|       |      ,_______,       |
+    |        ,'o  |       |        )   (         |
+    |       [_,   |       |      ,      `        |
+    |        `._  |       |    _/_________\_     |
+    |           ll|       |   |_____________|    |""",
 
     
 
@@ -269,10 +349,30 @@ treasury={
 
     "name" : "Circe's Treasury",
 
-    "description": """The candles ignite as you walk into the treasury, the heads of wolves and great bears 
+    "description": """  The candles ignite as you walk into the treasury, the heads of wolves and great bears 
     decorate the walls, and the floor is carpeted with animal fur.`The heads seem to still posses the souls 
     of the animals, watching over the safe.
-    There is a gold door, the door doesn’t have a lock.""",
+    There is a gold door, the door doesn’t have a lock.
+    _____________________________________________
+    |                                            |
+    |                                            |
+    |                                            |
+    |                                 (\         |
+    |	                          .'.        |
+    |           +--------------+      | |        |
+    |          /              /|      | |        |
+    |         /              / |      |_|        |
+    |        *--------------*  |      ) (        |
+    |        |              |  |       |         |
+    |        |   [ENTER]    |  |      / \        |
+    |        |              |  |    _}___{_      |
+    |________|     (o)      |  +____|     |______|
+    |        |   [----]     | /     |     |      |
+    |        |              |/      |     |      |
+    |        *--------------*       |     |      |
+    |                               |     |      |
+    |                               |     |      |
+    |                               |     |      |""",
 
 
     'examineDescription':'A plain safe in the corner requires a 4 digit code to unlock',
@@ -300,10 +400,31 @@ cyclopsEntrance = {
 
 	"name" : "Professor Polys office",      
 
-	"description": """At the entrance of a cave,' Professor Polyphemus's Office' reads on a hardwood door in 
-	bold black letters outlined in gold. """ ,
+	"description": """  At the entrance of a cave,' Professor Polyphemus's Office' reads on a hardwood door in 
+	bold black letters outlined in gold.
+	_____________________________________________
+        |                                            |
+        |                                            |
+        |  # #  ##                   ### \/#|### |/##|                                            
+        | ## ##  # ##               ##\/#/ \||/##/_/#|                           
+        |## 0\/#\|# ()|           ###  \/###|/ \/ # #|
+        |#\/4/#/#||/# /_        ##_\_#\_\## | #/###_/|
+        | #\5#|()|/#\/ '       ## #### # \ #| /  ####|
+        | #_1 |# |##/___..-.    __#_--###`  |{,###---|
+        |  # #| #|._/  __ \_`-.__         \ }{       |
+        |    #\#\|#/ .'/__ \_ `-. \--.     }}{       |
+        |      \||.-_/#|  |#\  /-' `\_      }}{      |
+        |       |||/###| .|##\_  \._   `-   {{}      |
+        | ""'   |_|####|  |####\_`.  -' \=-~{ .-^- _ |
+        |""'"'	 " "'"''"'   '" ''"'"''"   `}  ""'"  |  
+        | ""'""        ""'"''    "'""      ""'""     |
+        |""     "'"" ''""          '"'""'            |
+        | "''"" "'"'       "'''" "'         ""' ""'  |
+        |    ""'"'"     ""''""'       ""''""'      "'|
+        |                                            |""" ,
 
-        "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting. """,#######how do you know the shout command?>?/???
+        "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting.
+""",#######how do you know the shout command?>?/???
                                                                                                                         # "items":"something to awaken the poly...? 
 
         'exits':{'south':'cyclops',
@@ -327,7 +448,7 @@ cyclops = {
 
 	"name": "Cave of the Cyclops",
 
-	"description": """You enter a fluorescently lit office. Aggresive clouds of whiskey vapor attack your 
+	"description": """  You enter a fluorescently lit office. Aggresive clouds of whiskey vapor attack your 
 	sense of smell and cause your eyes to water.
 
         In the center of the room is a large oak desk with a framed picture of Poly and his father and a black
@@ -339,7 +460,27 @@ cyclops = {
         An eyepatch clings to his skin, inset into his gaping cavernous eyesocket and a powerful rhythmic resonance 
 	of polys formidable heart thunderers rumblingly,
 
-        causing the ground and the lofty walls of the office to vibrate and tremble.""",
+        causing the ground and the lofty walls of the office to vibrate and tremble.
+        _____________________________________________
+        |                  ,#####,                   |
+        |                  #_____#                   |
+        |                  |(_O_)|                   |
+        |                  |  u  |                   |
+        |                  \  =  /                   |
+        |                  |\___/|                   |
+        |         ___ ____/:     :\____ ___          |
+        |       .'   `.-===-\   /-===-.`   '.        |
+        |      /      .-"" ""-.-"" ""-.      \       |
+        |     /'             =:=             '\      |
+        |     | ' .:    o   -=:=-   o    :    |      |
+        |     |     |. '-.....-'-.....-'|    '|      |
+        |     | '    \.     --:--     . / :   |      |
+        |     \ '  :  \__________--____/      /      |
+        |      \     :        '    |    '    /       |
+        |  _____\__________________|________/______  |
+        | ||        [Professer Polypheus]         || |
+        | ||======================================|| |                     
+        | ||                                      || |""",
 
         #'me want you is go get me my glass eye is lost hicup'
 
@@ -372,10 +513,30 @@ sirenCorridor = {
 
         
 
-    "description": """The relentless Cardiffian rain has flooded the corridor and only the tip tap of the 
+    "description": """  The relentless Cardiffian rain has flooded the corridor and only the tip tap of the 
     water seeping through the cracks in the roof breaks the silence.
     You can just about make out the far end where two men are wearing ear protectors. There is an pungent 
-    smell of rotting flesh seemingly coming from the depths of the water.""",
+    smell of rotting flesh seemingly coming from the depths of the water.
+    ______________________________________________
+    |.'',                                     ,''.|
+    |.'.'',                                 ,''.'.|
+    |.'.'.'',                             ,''.'.'.|
+    |.'.'.'.'',                         ,''.'.'.'.|
+    |.'.'.'.'.|                         |.'.'.'.'.|
+    |.'.'.'.'.|===;                 ;===|.'.'.'.'.|
+    |.'.'.'.'.|:::|',             ,'|:::|.'.'.'.'.|
+    |.'.'.'.'.|---|'.|, _______ ,|.'|---|.'.'.'.'.|
+    |.'.'.'.'.|:::|'.|'|0451045|'|.'|:::|.'.'.'.'.|
+    |,',',',',|---|',|'|1045104|'|,'|---|,',',',',|
+    |.'.'.'.'.|:::|'.|'|5104510|'|.'|:::|.'.'.'.'.|
+    |.'.'.'.'.|---|',/~~~~~ ~~~~~\,'|---|.'.'.'.'.|
+    |.'.'.'.'.|~~~~~~~~~  ~~~~~~~~~~~~~~|.'.'.'.'.|
+    |.'.'.'._/~~~~~~~~~~~~     ~~~~~~.~~~\_.'.'.'.|
+    |.'.'.'/~~~~~~~    ~~~~~~~~~~~~~~~~~~~~\'.'.'.|
+    |.'.'./~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~\.'.'.|
+    |.'.'|~~~~~~~~~.~~~~~~~~~~  ~~~~~~~~~~~~|,'.'.|
+    |.'_/~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~\_,'.|
+    |;/~~~~~~~.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\',|""",
 
     "items": [redHerring],
     "creatures" : [],
@@ -409,13 +570,33 @@ sirenLair = {
 
         
 
-	"description": """You wade into the cold water fearlesy with images of Ithyca in your mind. You see 
+	"description": """  You wade into the cold water fearlesy with images of Ithyca in your mind. You see 
 	girls bathing in the water red lipped and doe eyed creatures dressed provocatively in blue, red and white skirts.
 
 	The little light there reflects of firm pouting breasts and their lustrus song pollutes your mind with 
 	desire as you paddle furiously in their direction.
 	The foulest stench is in the air, danger begins to loom, for no mere mortal can resist them, and they 
-	close in to seal your doom, """,
+	close in to seal your doom.
+    _____________________________________________
+    |                                            |
+    |                                            |
+    |       .--.                                 |
+    |      /`._ `.                               |
+    |     | /. .` \                              |
+    |     / ) _ ( /                 _.._         |
+    |    | /.`-' \-.              .'    '.       |
+    |    / )`.   (  \            (____/`\ \      |
+    |    | .  \^  \_|           (  |' ' )  )     |
+    |    |_|`. \`-| |           )  _\- _/  (     |
+    |    //   ' \`\ | __..---.(`_.'  ``\    )    |
+    |   .'--._.\ .| |`;-""-._(_         `; (     |     
+    |__/   `/-._`.`-./      |`-`'--'     ; )_____|
+    |  |   /     `-._ `._/  |         ,|_|(      |
+    |   `./_.----`  `.' /-,.|___.-'--'_| |_)     |
+    | _.--`      _.-' ,'__|   / .........'       |
+    |'.__..--````;--"`;   |   `-`                |                
+    |             `'..__.'                       |          
+    |                                            |""",
                                                                                                         # impregnat thier womb?
 	"items": [],
 

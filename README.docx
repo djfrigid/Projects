@@ -10,3 +10,20 @@ example dictionary = {
   "height" : "another value",
   "weight" : "a third value" (note no comma here as this is the final value)
 }
+
+Implement conditional blocks for: cyclops entry to lair: siren corridor to siren lair: Circe to icatha: Circe to Kyrla:Calypso to siren corridor.
+Lockbox puzzle in treasury - enter 4501 to get odyssues' bow
+ensure siren lair works
+add ring to siren lair
+get circe to give panacea when examine is used
+stop bosses from resurecting when leaving the room
+Add introduction and room to start of the game
+Make ithaca room ask questions and grant win condition if correct. if not push back to Circe
+Combat bug with double fight needs fixing
+make bow give strength and ring grant dex
+add text to display info e.g. "you have dropped...", "You can go..."
+fix bug where initiating a fight after loading crashes the game
+Add min debuff to monsters
+integrity, alternate ending
+input stats
+SPELLING

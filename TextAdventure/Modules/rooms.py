@@ -10,7 +10,7 @@ from items import *
 
 
 
-print('''Out into the rain in misrable Cardiff you go, after reading an article about the amount of 
+print('''       Out into the rain in misrable Cardiff you go, after reading an article about the amount of 
 	deaths caused by pharmacy errors(1 in 1000!).
 	You are hunched over with a cigarette in your mouth, it goes out seconds after it was lit after 
 	a BMWx5 sped through a puddle.
@@ -93,7 +93,16 @@ print('''Out into the rain in misrable Cardiff you go, after reading an article 
 ithaca={
   'name':'The Lecture Hall',
 
-   ' description ':'place holder string',
+   ' description ':"""Thank the Gods you are finally home! But wait, your home is infested with hundreds of men all
+    hoping for your wife's hand in marriage. Your wife looks as young as the day you left, but the years have not
+    been as kind to you, she is doubtful of your claim to be her Ulysses. She asks you to recount details of your
+    journey, the Gods will tell her if you are being truthful.
+
+    'If you are my darling Ulysses, then you will answer me three questions.'
+
+    'What do Cerce's sash, a lonely fish, and the skirts of the Sirens have in common?'
+
+    """
 
     'items':[],
 
@@ -309,7 +318,7 @@ circe={
     
 
 
-    'examineDescription' :"""Round her supple waist is scarlet sash , she has a wildly seductive, crazy, 
+    'examineDescription' :"""Round her supple waist is deep red sash , she has a wildly seductive, crazy, 
     loopy nymphetic air about her.
 
      Smirking and visibly flatterd by your wondering eyes, she reminds you that her eyes, "are up here..."
@@ -570,8 +579,8 @@ sirenLair = {
 
         
 
-	"description": """  You wade into the cold water fearlesy with images of Ithyca in your mind. You see 
-	girls bathing in the water red lipped and doe eyed creatures dressed provocatively in blue, red and white skirts.
+	"description": """  You wade into the cold water fearlesy with images of Ithyca in your mind.
+        'These girls seem to be the visible personification of absolute perfection'
 
 	The little light there reflects of firm pouting breasts and their lustrus song pollutes your mind with 
 	desire as you paddle furiously in their direction.
@@ -603,7 +612,8 @@ sirenLair = {
 	"creatures" : [siren],
 
       'exits':{} ,                                                                                ##### if win .... how does this exit work
-    'examine Description':'These girls seem to be the visible personification of absolute perfection',
+    'examine Description':
+         """The girls are bathing in the water, dressed provocatively in bright red skirts.""",
     
     'lowHelp' :  'There is no escaping this fight im afraid',
     'midHelp' :  'There is no escaping this fight im afraid',

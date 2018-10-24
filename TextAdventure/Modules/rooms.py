@@ -1,3 +1,10 @@
+
+#Type "copyright", "credits" or "license()" for more information.
+
+
+
+#>>> from items import *
+
 from entities import *
 from items import *
 
@@ -5,13 +12,108 @@ ithaca={
     
   'name':'The leacture hall',
 
+
+
+print('''       Out into the rain in misrable Cardiff you go, after reading an article about the amount of 
+	deaths caused by pharmacy errors(1 in 1000!).
+	You are hunched over with a cigarette in your mouth, it goes out seconds after it was lit after 
+	a BMWx5 sped through a puddle.
+	Treating yourself to Tescos' 3 pound meal deal, you arrive at the pharmacy. The slippers you 
+	are wearing are visibly soaked, they squelch as you approach the counter. The woman
+	behind it looks at you judgingly, visibly unimpressed, and when you ask for a box of flu medicine,
+	she returns squinting at the box in her hand, seemingly unable to read it without
+	her glasses. She hands you a box of 'Oddssydinazacitidine'.
+       
+       'POSSIBLE SIDE AFFECTS MAY INCLUDE':
+        *Causing serious tranformation of reality, passing body and mind to hyperquantum capacities,
+        *Magicular particles in your vicinity may double to relative inevitability,
+        *Fractal dimensions above infinity+1 collapsing into a finite equilibrium.
+        *Mild nausea
+        *Drowsiness
+        
+        You take it politely without question, reasoning that 1 in 1000 is a tremendously small percentage...
+        As you start the 10 minute walk back to your lectures, you pop 3 of the little yellow pills.
+        Suddenly you heart starts to thump, your knees become weak...
+          
+
+    ''')
+
+
+
+  #  name - string 
+
+  #  description - String 
+#
+  #  items - list of dictionaries 
+
+#    creatures - list of dictionaries
+
+  #  examine Description - String
+    
+    #lowHelp - String - the Low WIS hint
+    
+  #  midHelp - String - the mid WIS hint
+    
+  #  highHelp - String - the high WIS hint
+
+#    exits - dictionary
+
+
+
+
+
+
+
+
+
+
+
+""" This handles room definitions . A room is a dictionary with the following attributes 
+
+
+
+    'name':'namemcnameface'
+>>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
+
    'description':'place holder string',
 
     'items':[],
 
     'creatures':[],
 
-    'examineDescription':'place holder string',
+    'examine Description':'place holder string',
+    
+    'lowHelp' :  'place holder string',
+    'midHelp' :  'place holder string',
+    'highHelp' : 'place holder string',
+
+    'exits'{}
+
+"""
+
+
+
+
+
+ithaca={
+  'name':'The Lecture Hall',
+
+   ' description ':"""Thank the Gods you are finally home! But wait, your home is infested with hundreds of men all
+    hoping for your wife's hand in marriage. Your wife looks as young as the day you left, but the years have not
+    been as kind to you, she is doubtful of your claim to be her Ulysses. She asks you to recount details of your
+    journey, the Gods will tell her if you are being truthful.
+
+    'If you are my darling Ulysses, then you will answer me this:'
+
+    'What do Cerce's sash, a lonely fish, and the skirts of the Sirens have in common?'
+
+    """,
+
+    'items':[],
+
+    'creatures':[],
+
+    'examine Description':'place holder string',
     
     'lowHelp' :  'placeholder string',
     'midHelp' :  'place holder string',
@@ -27,18 +129,42 @@ calypsoCave={
 
     "name" : """Calypso's cave""",
 
-    "description": """Boggeled minded, you arrive at a place that somewhat resembles your universitys reseption but the only diffrence is that its actaully a cave,
-    on an island, in anchent greese""",
+    "description": """  Your mind boggled, you arrive at a place that somewhat resembles your university's 
+    reception, the only difference is that it's actually a cave, on an island, in Ancient Greece
+    _____________________________________________
+    |  | '' '  /        |'' ' |      \'  ' '|     |
+    |   \' '  /         |' '' /       | ' ''/     |
+    |    \ ''|  	\ '' /	      \' ' |      |	      
+    |     |  /           \ '|          \' /       | 
+    |      \/             | /           \/       |
+    |                     \/                     |
+    |                                            |
+    |                           # #### ####      |
+    |                         ### \/#|### |/#### |
+    |                        ##\/#/ \||/0#/_/##/_|
+    |                       ###  \/###|/4\/ # ###|
+    |                    ##_\_#\_\## | #5###_/_##|
+    |       \. _(9>     ## #### # \ #| /1 #### ##|
+    |        \==_)       __#_--###`  |{,###---###|
+    |  _______-'=___________       \ }{          |
+    |  |    [Reception]    |        }}{          |
+    |  |                   |        }}{          |
+    |  |___________________|        {{}          |        
+    |                         , -=-~{ .-^- _     |""",
 
     'exits':{
 
-    'east':'cyclopsEntrance',
+	'east':'cyclopsEntrance',
 
-    'down':'basement',
+	'down':'basement',
 
+<<<<<<< HEAD
     'south':'beach',
     
     "north" : "sirenCorridor"},
+=======
+	'south':'Beach'},
+>>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
 
 
 
@@ -46,12 +172,13 @@ calypsoCave={
 
     'creatures':[],
 
-    'examineDescription':''' Round about the cave grows luxuriant wood, alder and sweet-smelling cypress, where birds long of wing wont to nest.
+    'examine Description':'''Around about the cave there grows luxuriant wood, alder and sweet-smelling 
+    cypress, where birds long of wing go to nest.
     Owls, falcons and sea-crows with chattering tongues ply their business on the sea. ''',
 
 
     
-    'lowHelp' :  'I hear the beach in horrible this time of year.',
+    'lowHelp' :  'I hear the beach is horrible this time of year.',
     'midHelp' :  'There are 3 exits from this island',
     'highHelp' : 'Perhaps with the items you find here you will be able to escape!'
 
@@ -59,7 +186,7 @@ calypsoCave={
 
 }
 
-    
+	
 
 beach={
 
@@ -67,29 +194,50 @@ beach={
 
     "name" : """Calypso's island""",
 
-    "description": """You walk down to a bay but far from the Carrabin sandy beaches
-creating connotations of mai tais and pineapples, here it rains and thunder seems to have charred the skull and bones flag atop the mast of pirate ship""",
+    "description": """  You walk down to a bay but far from the Caribbean sandy beaches creating images of
+    mai tais and pineapples, here it rains and thunder seems to have charred the skull and bones flag 
+    atop the mast of pirate ship
+    _____________________________________________
+    |                                            |
+    |           4                                |
+    |                      1                     |          				     
+    |                5                           |
+    |  0                                         |       
+    |                         _\/_               |
+    |          _              //o\  _\/_         |
+    |__ __ ___(_)_ __ __ ____ _ | __/o\\ _        |
+    |_=_-=-=-_-__=_-= _=_=-=_,-'|"'""-|-,_       |
+    |--_- =- _=-=- -_=-=_,-"  /|      |          |
+    |-_ -=- =- =- -=.--"     / |      __     .   |
+    |_=-=-_-_=-=_,-"        /__|__               |
+    |-=_-_=-=_,-"         \--------/       .     |
+    | -_=_,-"                                    |
+    |=_-"		__                  __   |
+    |-"    .                  .                  |
+    |            .                    .     .    |
+    |                        __          __      |
+    |   __                                       |""",
 
 
 
-    'examineDescription':"""Time has had toll on the once great ship, it is smashed and battered. The rope hanging from the mast are green and slippery with algae""",
+    'examineDescription':"""Time has taken its toll on the once great ship, it is smashed and battered. 
+    The ropes hanging from the mast are green and slippery with algae""",
     
     'exits':{'north':'calypsoCave'},
 
     'items':[rope],
 
     'creatures':[],
-    
 
     
     'lowHelp' :  'Whatever you do, dont try and go for a swim...',
     'midHelp' :  'What do you need from here?',
-    'highHelp' : 'The wreak has some things that could help you escape'
+    'highHelp' : 'The wreck has some things that could help you escape'
 
 
 }
 
-    
+	
 
 basement={
 
@@ -97,8 +245,29 @@ basement={
 
     "name" : "The Basement",
 
-    "description": """Cobwebs and dust have replaced the white paint here. Against one of the walls a is wooden crate that glares at you threataningly...
-    you clench your fists preparing for a show down...""",
+    "description": """  Cobwebs and dust have replaced the white paint here. Against one of the walls is 
+    a wooden crate that glares at you threateningly...
+    You clench your fists preparing for a showdown...
+    _____________________________________________
+    | ## #  |                         ## #       |
+    |  ## # | [0451]      __.--'-.   ####        |
+    |##  #  |       __.--'        `-. ##         |		     
+    |       | __.--'                 `-          |
+    |       ||.                  __.--||         |
+    |       |||`-.         __.--'     ||         |
+    |       |||   `- __.--'           ||         |   
+    |       |||    |||                ||         |
+    |       |||    |||                ||_________|
+    |       |||    |||                ||         |
+    |       /||    |||                ||         |
+    |      / ||    |||                ||         |
+    |     /  ||    |||                ||         |
+    |    /   ||    |||           __.--'          |
+    |   /      `-. |||     __.--'                |
+    |  /          `-||_.--'                      |
+    | /                                          |
+    |/                                           |
+    |                                            |""",
 
     "items": [],
 
@@ -107,17 +276,17 @@ basement={
      
     'creatures':[box],
 
-    'examineDescription':'The crate seems to utter something about your mother under its breath. ',
+    'examine Description':'The crate seems to utter something about your mother under its breath. ',
     
     'lowHelp' :  'Box',
     'midHelp' :  'Perhaps with the items you find here you will be able to escape!',
     'highHelp' : 'Try and think inside the box'
 
-  
+
 
 }
 
-    
+	
 
     
 
@@ -127,30 +296,63 @@ circe={
 
     "name" : """Circe's Mansion""",
 
-    "description": """The Mansion you arrive at boasts grand white marble columns and suspiciously colourful flowers placed seemingly at random around the front room. 
-    Walking gracefully down the stairs one hand running down the balcony, wearing a long white silk robe and gold framed glasses, is Circe.
-    Following her are three abnormally large ginger tabby cats that lay down lazily by the roaring fire. Displayed in the centre of the room, a life size bronze piggy bank with a
-    terrified expression.""",
+    "description": """  The Mansion you arrive at boasts grand white marble columns and suspiciously 
+    colourful flowers placed seemingly at random around the front room. 
+
+    Walking gracefully down the stairs one hand running down the balcony, wearing a long white silk 
+    robe and gold framed glasses, is Circe.
+
+    Following her are three abnormally large ginger tabby cats that lay down lazily by the roaring fire.
+    Displayed in the centre of the room, a life size bronze piggy bank with a
+    terrified expression.
+    _____________________________________________
+    |                           (_,.....,_)      |
+    |                             |||||||        | 
+    |             w*W*W*W*w       |||||||        | 
+    |              \"."."/        |||||||        |
+    |               //`\\         |||||||        |
+    |              (/- -\)        |||||||        |
+    |              (\_-_/)        |||||||        |
+    |             .-~'='~-.       |||||||        |
+    |            /`~`"Y"`~`\      |||||||        |
+    |           / /(_ * _)\ \     |||||||        |
+    |          / /  )   (  \ \    |||||||        |
+    |          \ \_/\\_//\_/ /    |||||||        |
+    |           \/_) '*' (_\/     |||||||        |
+    |             |       |       |||||||        |
+    |          _;_|       |      ,_______,       |
+    |        ,'o  |       |        )   (         |
+    |       [_,   |       |      ,      `        |
+    |        `._  |       |    _/_________\_     |
+    |           ll|       |   |_____________|    |""",
 
     
 
 
-    'examineDescription' :"""Round her supple waist is scarlet sash , she has a wildly seductive, crazy, loopy nymphetic air about her.
-     Smirking and visably flatterd by your wondering eyes, she reminds you that her eyes, "are up here..."
+    'examineDescription' :"""Round her supple waist is deep red sash , she has a wildly seductive, crazy, 
+    loopy nymphetic air about her.
+
+     Smirking and visibly flatterd by your wondering eyes, she reminds you that her eyes, "are up here..."
      
                 "It seems you have enraged the great posiden,
-            now there is now place for you to hide in,
+            now there is no place for you to hide in,
            give this to the man whose eye you poked out,
            he will no doubt forget what he was angry about,
           and the way to your world will be safe... iden"
           
-          you are impressed by her eloquent lymeric and she  passes the Panacea to you.
+          you are impressed by her eloquent rhyme and she passes the Panacea to you.
   
           """,
 
     'exits':{'up':'treasury',
 
+<<<<<<< HEAD
         'north':'ithaca',},
+=======
+	    'north':'ithyca',
+	     
+	    'south':'sirenCorridor'},
+>>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
     
                                                                                                #######how does he get to island again>:?
 
@@ -159,24 +361,45 @@ circe={
     'creatures':[],
 
     
-    'lowHelp' :  'Perhaps command would ferther you in your cause.',
+    'lowHelp' :  'Perhaps a command would further your cause.',
     'midHelp' :  'Could this be anymore obvious?',
-    'highHelp' : 'Dont play inocent man  we know whos poked his eye out.'
+    'highHelp' : 'Dont play innocent man, we know who poked his eye out.'
 
 }
 
-    
+	
 
 treasury={
 
     "name" : "Circe's Treasury",
 
-    "description": """You walked in to the treasury, candles lite up all all of a sudden! Heads of wolfs and girzzly bears decorate the walls, and the
-floor is carpeted with animal fur.`The heads seem to still posses the souls of the animals still watching over the safe.
-There is a gold door, the door doesn’t have a lock.""",
+    "description": """  The candles ignite as you walk into the treasury, the heads of wolves and great bears 
+    decorate the walls, and the floor is carpeted with animal fur.`The heads seem to still posses the souls 
+    of the animals, watching over the safe.
+    There is a gold door, the door doesn’t have a lock.
+    _____________________________________________
+    |                                            |
+    |                                            |
+    |                                            |
+    |                                 (\         |
+    |	                          .'.        |
+    |           +--------------+      | |        |
+    |          /              /|      | |        |
+    |         /              / |      |_|        |
+    |        *--------------*  |      ) (        |
+    |        |              |  |       |         |
+    |        |   [ENTER]    |  |      / \        |
+    |        |              |  |    _}___{_      |
+    |________|     (o)      |  +____|     |______|
+    |        |   [----]     | /     |     |      |
+    |        |              |/      |     |      |
+    |        *--------------*       |     |      |
+    |                               |     |      |
+    |                               |     |      |
+    |                               |     |      |""",
 
 
-    'examineDescription':'A plain safe in the corner requires a 4 digits to unlock',
+    'examineDescription':'A plain safe in the corner requires a 4 digit code to unlock',
     
 
     'exits':{'down':'circe'},
@@ -187,9 +410,9 @@ There is a gold door, the door doesn’t have a lock.""",
     'creatures':[],
 
     
-    'lowHelp' :  'There are only 9999 options you have to go throgh really... or perhaps its hidden somewhere and you missed it. ',
-    'midHelp' :  'Lets just say the images of the rooms wernt added because of the impressive graphics',
-    'highHelp':  'The code is hidden in the rooms, but you must look carfully',
+    'lowHelp' :  'There are only 10,000 options you have to go through really... or perhaps its hidden somewhere and you missed it. ',
+    'midHelp' :  """Lets just say the images of the rooms weren't added because of the impressive graphics""",
+    'highHelp':  'The code is hidden in the rooms, but you must look carefully',
 
 
 }
@@ -199,16 +422,38 @@ cyclopsEntrance = {
 
 
 
-    "name" : "Professor Polys office",      
+	"name" : "Professor Polys office",      
 
-    "description": "Up a short flight of stairs,' Professor Polyphemus's Office' reads on a semi translucent door in bold black letters outlined in gold. """ ,
+	"description": """  At the entrance of a cave,' Professor Polyphemus's Office' reads on a hardwood door in 
+	bold black letters outlined in gold.
+	_____________________________________________
+        |                                            |
+        |                                            |
+        |  # #  ##                   ### \/#|### |/##|                                            
+        | ## ##  # ##               ##\/#/ \||/##/_/#|                           
+        |## 0\/#\|# ()|           ###  \/###|/ \/ # #|
+        |#\/4/#/#||/# /_        ##_\_#\_\## | #/###_/|
+        | #\5#|()|/#\/ '       ## #### # \ #| /  ####|
+        | #_1 |# |##/___..-.    __#_--###`  |{,###---|
+        |  # #| #|._/  __ \_`-.__         \ }{       |
+        |    #\#\|#/ .'/__ \_ `-. \--.     }}{       |
+        |      \||.-_/#|  |#\  /-' `\_      }}{      |
+        |       |||/###| .|##\_  \._   `-   {{}      |
+        | ""'   |_|####|  |####\_`.  -' \=-~{ .-^- _ |
+        |""'"'	 " "'"''"'   '" ''"'"''"   `}  ""'"  |  
+        | ""'""        ""'"''    "'""      ""'""     |
+        |""     "'"" ''""          '"'""'            |
+        | "''"" "'"'       "'''" "'         ""' ""'  |
+        |    ""'"'"     ""''""'       ""''""'      "'|
+        |                                            |""" ,
 
-    "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting. """,#######how do you know the shout command?>?/???
+        "examineDescription":"""The top of the doorway seems to be worn, perhaps by some unintentional headbutting.
+""",#######how do you know the shout command?>?/???
                                                                                                                         # "items":"something to awaken the poly...? 
 
-    'exits':{'south':'cyclops',
+        'exits':{'south':'cyclops',
 
-             'west':'calypsoCave'},
+	         'west':'calypsoCave'},
 
 
     'items':[umbrella],
@@ -216,7 +461,7 @@ cyclopsEntrance = {
     'creatures':[],
 
     'lowHelp' :  'What command could help you now?',
-    'midHelp' :  'open sesime would proberly work if you said it load enogh',
+    'midHelp' :  'Open sesame would probably work if you said it loud enough',
     'highHelp' : 'Try and twist and shout, just without the twist'
 
 }
@@ -225,32 +470,60 @@ cyclopsEntrance = {
 
 cyclops = {
 
-    "name": "Cave of the Cyclops",
+	"name": "Cave of the Cyclops",
 
-    "description": """You enter a fluorescently lit office. Aggresive clouds of whiskey vapor arrest your sense of smell and cause your eyes to water.
-        In the center of the room is a large oak desk with a framed picture of Poly and his father and a black umberella leaning on it.
-        The figure slumped behind it is a broad shouldered, deepcheasted, stronglimbed, freelyfreckeled, wide mouthed, longheaded, bearkneed, brawnyhanded, ruddyfaced drunkard.
-        An eyepatch clings to his skin, inset into his gaping cavernous eyesocket and A powerful rhythmic resonance of polys formidable heart thunderers rumblingly,
-        causing the ground and the lofty walls of the office to vibrate and tremble.""",
+	"description": """  You enter a fluorescently lit office. Aggresive clouds of whiskey vapor attack your 
+	sense of smell and cause your eyes to water.
+
+        In the center of the room is a large oak desk with a framed picture of Poly and his father and a black
+	umberella leaning on it.
+
+	The figure slumped behind it is a broad shouldered, deepchested, stronglimbed, freelyfreckeled, wide mouthed,
+	longheaded, bearkneed, brawnyhanded, ruddyfaced drunkard.
+
+        An eyepatch clings to his skin, inset into his gaping cavernous eyesocket and a powerful rhythmic resonance 
+	of polys formidable heart thunderers rumblingly,
+
+        causing the ground and the lofty walls of the office to vibrate and tremble.
+        _____________________________________________
+        |                  ,#####,                   |
+        |                  #_____#                   |
+        |                  |(_O_)|                   |
+        |                  |  u  |                   |
+        |                  \  =  /                   |
+        |                  |\___/|                   |
+        |         ___ ____/:     :\____ ___          |
+        |       .'   `.-===-\   /-===-.`   '.        |
+        |      /      .-"" ""-.-"" ""-.      \       |
+        |     /'             =:=             '\      |
+        |     | ' .:    o   -=:=-   o    :    |      |
+        |     |     |. '-.....-'-.....-'|    '|      |
+        |     | '    \.     --:--     . / :   |      |
+        |     \ '  :  \__________--____/      /      |
+        |      \     :        '    |    '    /       |
+        |  _____\__________________|________/______  |
+        | ||        [Professer Polypheus]         || |
+        | ||======================================|| |                     
+        | ||                                      || |""",
 
         #'me want you is go get me my glass eye is lost hicup'
 
 
-    "items": [earplug, dinghy],
+	"items": [earplug, dinghy],
 
 
-    "creatures" : [cyclops],###why is this i square braks??                                          
+	"creatures" : [cyclops],###why is this i square braks??                                          
 
 
-    'exits':{'north':'cyclopsEntrance'},
+        'exits':{'north':'cyclopsEntrance'},
         
 
 
-    'examineDescription':'Me want you is go get me my glass eye is lost',
+    'examine Description':'Me want you is go get me my glass eye is lost',
     
-    'lowHelp' :  'claptomania migh be bad but hey you need to get to you lecture.',
-    'midHelp' :  'did you check your inventory?',
-    'highHelp' : 'it not raining but that umberella sure would help',
+    'lowHelp' :  'Claptomania migh be bad but hey you need to get to you lecture.',
+    'midHelp' :  'Did you check your inventory?',
+    'highHelp' : 'It not raining but that umberella sure would help',
 
 
 
@@ -264,8 +537,30 @@ sirenCorridor = {
 
         
 
-    "description": """The relentless Cardiffian rain has flooded the corridor and only the tip tap of the water seeping through the cracks in the roof break the silence.
-        You can just about make out the far end where two men are wearing ear protectors. There is an pungent smell of rotting flesh seemingly coming from the depths of the water.""",
+    "description": """  The relentless Cardiffian rain has flooded the corridor and only the tip tap of the 
+    water seeping through the cracks in the roof breaks the silence.
+    You can just about make out the far end where two men are wearing ear protectors. There is an pungent 
+    smell of rotting flesh seemingly coming from the depths of the water.
+    ______________________________________________
+    |.'',                                     ,''.|
+    |.'.'',                                 ,''.'.|
+    |.'.'.'',                             ,''.'.'.|
+    |.'.'.'.'',                         ,''.'.'.'.|
+    |.'.'.'.'.|                         |.'.'.'.'.|
+    |.'.'.'.'.|===;                 ;===|.'.'.'.'.|
+    |.'.'.'.'.|:::|',             ,'|:::|.'.'.'.'.|
+    |.'.'.'.'.|---|'.|, _______ ,|.'|---|.'.'.'.'.|
+    |.'.'.'.'.|:::|'.|'|0451045|'|.'|:::|.'.'.'.'.|
+    |,',',',',|---|',|'|1045104|'|,'|---|,',',',',|
+    |.'.'.'.'.|:::|'.|'|5104510|'|.'|:::|.'.'.'.'.|
+    |.'.'.'.'.|---|',/~~~~~ ~~~~~\,'|---|.'.'.'.'.|
+    |.'.'.'.'.|~~~~~~~~~  ~~~~~~~~~~~~~~|.'.'.'.'.|
+    |.'.'.'._/~~~~~~~~~~~~     ~~~~~~.~~~\_.'.'.'.|
+    |.'.'.'/~~~~~~~    ~~~~~~~~~~~~~~~~~~~~\'.'.'.|
+    |.'.'./~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~\.'.'.|
+    |.'.'|~~~~~~~~~.~~~~~~~~~~  ~~~~~~~~~~~~|,'.'.|
+    |.'_/~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~\_,'.|
+    |;/~~~~~~~.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\',|""",
 
     "items": [redHerring],
     "creatures" : [],
@@ -276,15 +571,19 @@ sirenCorridor = {
 
     'exits':{
 
+<<<<<<< HEAD
         'north':'circe'
+=======
+	    'north':'Circe'
+>>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
 
-        },
+	    },
     
 
     
-    'lowHelp' :   'You need to cross these waters to get to Ithaca',
+    'lowHelp' :   'You need to cross these waters to get to Ithyca',
     'midHelp' : 'What did you steal from Poly that could help you cross?',
-    'highHelp' : 'Proberly wise to follow the two mens example, and that dinghy will take you over the waters'
+    'highHelp' : 'Probably wise to follow the two mens example, and that dinghy will take you over the waters'
 
 
 }
@@ -295,20 +594,45 @@ sirenLair = {
 
 
 
-     "name": "Cheerleading practice room",
+	 "name": "Cheerleading practice room",
 
         
 
-    "description": """You wade into the cold water fearlesy with images of Ithica in your mind. You see girls bathing in the water red liped and doe eyed creatures dressed provocatively in blue red and white skirts.
-    The little light there reflects of firm pouting breasts and their lustrus song pollutetes your mind with desire as you paddle furiously in their direction.
-    The foulest stench is in the air, danger begins to loom, for no mere mortal can resist them, and they close in to seal your doom, """,
-                                                                                                        # impregnat thier womb?
-    "items": [],
+	"description": """  You wade into the cold water fearlesy with images of Ithyca in your mind.
+        'These girls seem to be the visible personification of absolute perfection'
 
-    "creatures" : [siren],
+	The little light there reflects of firm pouting breasts and their lustrus song pollutes your mind with 
+	desire as you paddle furiously in their direction.
+	The foulest stench is in the air, danger begins to loom, for no mere mortal can resist them, and they 
+	close in to seal your doom.
+    _____________________________________________
+    |                                            |
+    |                                            |
+    |       .--.                                 |
+    |      /`._ `.                               |
+    |     | /. .` \                              |
+    |     / ) _ ( /                 _.._         |
+    |    | /.`-' \-.              .'    '.       |
+    |    / )`.   (  \            (____/`\ \      |
+    |    | .  \^  \_|           (  |' ' )  )     |
+    |    |_|`. \`-| |           )  _\- _/  (     |
+    |    //   ' \`\ | __..---.(`_.'  ``\    )    |
+    |   .'--._.\ .| |`;-""-._(_         `; (     |     
+    |__/   `/-._`.`-./      |`-`'--'     ; )_____|
+    |  |   /     `-._ `._/  |         ,|_|(      |
+    |   `./_.----`  `.' /-,.|___.-'--'_| |_)     |
+    | _.--`      _.-' ,'__|   / .........'       |
+    |'.__..--````;--"`;   |   `-`                |                
+    |             `'..__.'                       |          
+    |                                            |""",
+                                                                                                        # impregnat thier womb?
+	"items": [],
+
+	"creatures" : [siren],
 
       'exits':{} ,                                                                                ##### if win .... how does this exit work
-    'examineDescription':'The hot girls seem to me to be the visible personification of absolute perfection',
+    'examine Description':
+         """The girls are bathing in the water, dressed provocatively in bright red skirts.""",
     
     'lowHelp' :  'There is no escaping this fight im afraid',
     'midHelp' :  'There is no escaping this fight im afraid',
@@ -317,10 +641,10 @@ sirenLair = {
 
 }
 kryllafight={
-    
     'name':'''Encounter with Kirill ''',
 
-   ' description ': ''' The door off the safe flings open and a whirlwind of air compleatly messing up your hairdoo. Soon the swirling wind dies down reveling a bow.''',
+   'description ': ''' The door of the safe flings open and a whirlwind of air completely messing up your 
+   hairdo. Soon the swirling wind dies down revealing a bow.''',
 
     ## take bow should print.... (by taking the bow it seems you have unwittilngly challanged the mighty krilla to a fight, )
 
@@ -328,13 +652,13 @@ kryllafight={
 
     'creatures':['krylla'],
 
-    'examineDescription':'',
+    'examine Description':'',
     'exits':{},
     
     
     'lowHelp' :  'Try and Stay alive',
-    'midHelp' :  '''If you are feeling this is a fight you can acually win, i recomend trying to read 'The art of war' to make sure you have a chance ''',
-    'highHelp' : 'Im sorry kiddo cant help you here im afraid...',
+    'midHelp' :  '''If you are feeling this is a fight you can acually win, i recommend trying to read 'The Art of War' to make sure you have a chance ''',
+    'highHelp' : "Im sorry kiddo cant help you in here I'm afraid...",
 
     
          }
@@ -345,12 +669,12 @@ kryllafight={
 
 rooms = {
 
-     
+	 
     'kryllafight':kryllafight,
          
     'calypsoCave':calypsoCave,
 
-    'beach':beach,
+    'Beach':beach,
 
     'basement':basement,
 
@@ -370,3 +694,10 @@ rooms = {
 
     
     }
+
+  
+
+
+#Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
+#SyntaxError: invalid syntax
+#>>> 

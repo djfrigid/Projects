@@ -5,8 +5,8 @@
 
 #>>> from items import *
 
-
-
+from entities import *
+from items import *
 
 
 
@@ -116,9 +116,9 @@ calypsoCave={
 
     'exits':{
 
-	'east':'Cyclops entry',
+	'east':'cyclopsEntrance',
 
-	'down':'Basement',
+	'down':'basement',
 
 	'south':'Beach'},
 
@@ -158,7 +158,7 @@ beach={
     
     'exits':{'north':'calypsoCave'},
 
-    'items':['rope'],
+    'items':[rope],
 
     'creatures':[],
 
@@ -172,7 +172,7 @@ beach={
 
 	
 
-Basement={
+basement={
 
     
 
@@ -297,7 +297,7 @@ cyclopsEntrance = {
 	         'west':'calypsoCave'},
 
 
-    'items':[],
+    'items':[umbrella],
 
     'creatures':[],
 
@@ -326,7 +326,7 @@ cyclops = {
         #'me want you is go get me my glass eye is lost hicup'
 
 
-	"items": [umberella, earbuds, dinghy],
+	"items": [earplug, dinghy],
 
 
 	"creatures" : [cyclops],###why is this i square braks??                                          
@@ -357,7 +357,7 @@ sirenCorridor = {
     "description": """The relentless Cardiffian rain has flooded the corridor and only the tip tap of the water seeping through the cracks in the roof breaks the silence.
         You can just about make out the far end where two men are wearing ear protectors. There is an pungent smell of rotting flesh seemingly coming from the depths of the water.""",
 
-    "items": [redherring],
+    "items": [redHerring],
     "creatures" : [],
 
     
@@ -396,7 +396,7 @@ sirenLair = {
                                                                                                         # impregnat thier womb?
 	"items": [],
 
-	"creatures" : [sirens],
+	"creatures" : [siren],
 
       'exits':{} ,                                                                                ##### if win .... how does this exit work
     'examine Description':'These girls seem to be the visible personification of absolute perfection',
@@ -440,9 +440,9 @@ rooms = {
          
     'calypsoCave':calypsoCave,
 
-    'beach':beach,
+    'Beach':beach,
 
-    'basment':basment,
+    'basement':basement,
 
     'cyclopsEntrance':cyclopsEntrance,
 

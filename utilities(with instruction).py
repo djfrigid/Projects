@@ -318,7 +318,7 @@ def inventory():
 
 def instruction():
     print("""You can:
-        go - move to another room
+        go - move to another room(either north, south, east, west, up, or down)
         drop - drop an item
         take - take an item
         pray - pray to the Gods
@@ -330,7 +330,15 @@ def instruction():
         kill - sometimes life gets a bit too much
         save - save your progress
         load - load a savegame
-        inventory - see what you are carrying""")
+        inventory - see what you are carrying
+        stats - have a look at your current stats
+        eat - consume an item in your inventory""")
+def playerStats(player):
+    print("STRENGTH: " + str(player["STR"]))
+    print("DEXTERITY: " + str(player["DEX"]))
+    print("CONSTITUTION: " + str(player["CON"]))
+    print("WISDOM: " + str(player["WIS"]))
+    print("STAMINA: " + str(player["STA"]))
             
 def executeCommand(command):
     
@@ -407,6 +415,9 @@ def executeCommand(command):
 
     elif command[0] == "instruction":
           instruction()
+          
+    elif command[0] == "stats":
+        playerStats(player)
     
     else:
         print("This makes no sense.")

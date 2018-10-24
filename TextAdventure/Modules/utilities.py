@@ -292,6 +292,9 @@ def executeExamine(entity):
             
             if currentRoom == rooms["treasury"]:
                 lockbox()
+                
+            elif currentRoom == rooms["circe"]:
+                player["inventory"].append(panacea)
             
         elif entity in player["inventory"]:
             print(itemList[entity]["description"])
@@ -311,7 +314,9 @@ def executeBuild(boat):
 
     else:
         print("You can't build with that!")
-        
+    
+    
+"""    
 def save():
     
     global currentRoom
@@ -360,7 +365,9 @@ def load():
     elif LoadList[8] == "The Long Corridor":
         currentRoom = rooms["sirenCorridor"]
     elif LoadList[8] == "Cheerleading practice room":
-        currentRoom = rooms["sirenLair"]  
+        currentRoom = rooms["sirenLair"] 
+        
+""" 
         
 def inventory():
     
@@ -395,6 +402,46 @@ def playerStats(player):
     print("CONSTITUTION: " + str(player["CON"]))
     print("WISDOM: " + str(player["WIS"]))
     print("STAMINA: " + str(player["STA"]))
+    
+def eat(item):
+
+    if item == "sandwich":
+        if itemList["sandwich"] in player["inventory"]:
+            if player["CON"] >= player["MAXCON"] - 10:
+                player["CON"] = player["MAXCON"]
+                print("Your hp has maxed out.")
+                player["inventory"].remove(sandwich)
+            else:
+                player["CON"] += 10
+                print("You recover 10hp")
+                player["inventory"].remove(sandwich)
+        else:
+            print("You do not have this item.")
+    elif item == "drink":
+        if itemList["drink"] in player["inventory"]:
+            if player["CON"] >= player["MAXCON"] - 3:
+                player["CON"] = player["MAXCON"]
+                print("Your hp has maxed out.")
+                player["inventory"].remove(drink)
+            else:
+                player["CON"] += 3
+                print("You recover 3hp")
+                player["inventory"].remove(drink)
+        else:
+            print("You do not have this.")
+    elif item == "crisps":
+        if itemList["crisps"] in player["inventory"]:
+            if player["CON"] >= player["MAXCON"] - 5:
+                player["CON"] = player["MAXCON"]
+                print("Your hp has maxed out.")
+                player["inventory"].remove(crisps)
+            else:
+                player["CON"] +=5
+                print("You recover 5hp")
+                player["inventory"].remove(crisps)
+    else:
+        print("You do not have this item.")
+            
             
 def executeCommand(command):
     
@@ -458,12 +505,7 @@ def executeCommand(command):
         
     elif command[0] == "help":
         hermes()
-    
-    elif command[0] == "load":
-        load()
-        
-    elif command[0] == "save":
-        save()
+
     
     elif command[0] == "inventory":
         inventory()
@@ -473,8 +515,20 @@ def executeCommand(command):
           
     elif command[0] == "stats":
         playerStats(player)
+        
+    elif command[0] == "eat":
+        if len(command) > 1:
+            eat(command[1])
     
     else:
         print("This makes no sense.")
+        
+"""    
+    elif command[0] == "load":
+        load()
+        
+    elif command[0] == "save":
+        save()
+"""
         
 

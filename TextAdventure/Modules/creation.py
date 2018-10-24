@@ -35,5 +35,5 @@ def create():
             print("That's not an aspect of yourself, unless of course you are being a deliberate pain.You don't need to improve on that ")
     
 
-            
+    player["MAXCON"] = player["CON"]        
 #i am likely to update this so the player can assign more than one point at once and again for balancing

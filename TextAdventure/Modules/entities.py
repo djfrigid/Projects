@@ -7,6 +7,8 @@
         
 """
 
+from items import *
+
 player = {
     
     "name" : "Ulysses", 
@@ -15,7 +17,9 @@ player = {
     "CON" : 50,
     "WIS" : 50,
     "STA" : 50, 
-    "inventory" : []
+    "MAXCON"  : 10, 
+    "inventory" : [sandwich, drink, crisps, tailbone]
+    
     
         
 }

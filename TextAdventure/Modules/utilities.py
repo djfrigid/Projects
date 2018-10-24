@@ -226,6 +226,7 @@ def executeGo(direction):
         printRoom()
         print()
         
+        
     else:
         print("No, You cannot go there")
         

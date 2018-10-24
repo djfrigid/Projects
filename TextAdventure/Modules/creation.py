@@ -5,6 +5,7 @@ from rooms import *
 
 def create():
      
+     
     availablePoints = 10
 
     while availablePoints > 0:

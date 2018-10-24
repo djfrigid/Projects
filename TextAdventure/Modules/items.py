@@ -133,6 +133,7 @@ redHerring = {
     "id" : "herring",
     "name": "Red Herring",
     "description": "A fair sized fish of crimson colouring"
+    
 
 }
 

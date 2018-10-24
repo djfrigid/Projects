@@ -76,6 +76,7 @@ creating connotations of mai tais and pineapples, here it rains and thunder seem
     'items':[rope],
 
     'creatures':[],
+    
 
     
     'lowHelp' :  'Whatever you do, dont try and go for a swim...',

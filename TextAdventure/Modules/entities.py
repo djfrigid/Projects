@@ -16,6 +16,7 @@ player = {
     "WIS" : 50,
     "STA" : 50, 
     "inventory" : []
+    
         
 }
 

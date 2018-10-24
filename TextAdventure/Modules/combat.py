@@ -10,6 +10,7 @@ def combat(monster):
     print(monster)
     
     
+    
     if monster == monsters["cyclops"] and umbrella in player["inventory"]:
         print("You stab Poly in his eye with the tip of the umbrella. He roars in pain and collapses into a ball, cradling his ruined face.")
         monster["CON"] = 0

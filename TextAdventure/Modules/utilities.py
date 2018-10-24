@@ -18,6 +18,7 @@ skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'towards', 'until', 'us', 'want', 'we', 'what', 'when', 'why',
               'wish', 'with', 'would']
 
+
 def lockbox():
     
     global currentRoom
@@ -70,6 +71,24 @@ def normaliseInput(userInput):
     qwords = filterWords(rwords, skip_words)
     
     return qwords
+
+def questions(room):
+    
+    answer = input("What is your answer brave hero? (Clue: its one word) ")
+    
+    answer = normaliseInput(answer)
+    
+    if answer[0] == "red" and itemList["integrity"] in player["inventory"]:
+        print("victory - with integrity")
+    elif answer[0] == "red" and itemList["integrity"] not in player["inventory"]:
+        print("victory - expedient")
+    else:
+        room = rooms["circe"]
+        print(room["name"].upper())
+        print()
+        print(room["description"])
+        return room
+        
 
 def divineIntervention(): #this as present can be abused , consider adding a penalty
     prayer = random.randint(0,100)
@@ -144,7 +163,6 @@ def executeTake(item):
         else:
             player["inventory"].append(cur_item)
             print("You have taken " + cur_item["name"])
-            print("Item description: " + cur_item["description"])
             currentRoom['items'].remove(cur_item)
     
         
@@ -225,6 +243,11 @@ def executeGo(direction):
             "west":"calypsoCave",
             
             "south":"cyclops"}
+        
+    if currentRoom == rooms["ithaca"]:
+        
+        currentRoom = questions(currentRoom)
+    
     
         
 def executeSwim():

@@ -23,22 +23,33 @@ def create():
         
         number = int(input("And how many points?"))
         
+        canAdd = True
+        
         if availablePoints - number < 0:
             print("you cannot assign that many points. You only have " + str(availablePoints) + " remaining")
-        
-        if choice == "STR":
-            player["STR"] += number
-        elif choice == "DEX":
-            player["DEX"]+= number
-        elif choice == "WIS":
-            player["WIS"]+= number
-        elif choice == "STA":
-            player["STA"]+= number
-        elif choice == "CON":
-            player["CON"]+= number
-        else: 
-            print("That's not an aspect of yourself, unless of course you are being a deliberate pain.You don't need to improve on that ")
+            canAdd = False
+            
+        if canAdd == True:
+              
+            if choice == "STR":
+                player["STR"] += number
+                availablePoints -= number
+            elif choice == "DEX":
+                player["DEX"]+= number
+                availablePoints -= number
+            elif choice == "WIS":
+                player["WIS"]+= number
+                availablePoints -= number
+            elif choice == "STA":
+                player["STA"]+= number
+                availablePoints -= number
+            elif choice == "CON":
+                player["CON"]+= number
+                availablePoints -= number
+            else: 
+                print("That's not an aspect of yourself, unless of course you are being a deliberate pain.You don't need to improve on that ")
     
+       
 
     player["MAXCON"] = player["CON"]        
 #i am likely to update this so the player can assign more than one point at once and again for balancing

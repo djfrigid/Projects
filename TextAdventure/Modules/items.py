@@ -147,7 +147,7 @@ itemList = {
     "umbrella": umbrella,
     "earplug": earplug,
     "integrity": integrity,
-    "wooden planks": planks,
+    "planks": planks,
     "rope": rope,
     "raft": raft,
     "Coccyx": tailbone,

@@ -85,6 +85,8 @@ def main():
         Suddenly you heart starts to thump, your knees become weak...
           
     ''')
+    
+    create()
      
     print(rooms["calypsoCave"]["name"].upper())
     print()

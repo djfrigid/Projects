@@ -1,30 +1,6 @@
 from items import *
 from entities import *
 
-print('''       Out into the rain in miserable Cardiff you go, after reading an article about the amount of 
-    deaths caused by pharmacy errors(1 in 1000!).
-    You are hunched over with a cigarette in your mouth, it goes out seconds after it was lit after 
-    a BMWx5 sped through a puddle.
-    Treating yourself to Tescos' 3 pound meal deal, you arrive at the pharmacy. The slippers you 
-    are wearing are visibly soaked, they squelch as you approach the counter. The woman
-    behind it looks at you judgingly, visibly unimpressed, and when you ask for a box of flu medicine,
-    she returns squinting at the box in her hand, seemingly unable to read it without
-    her glasses. She hands you a box of 'Oddssydinazacitidine'.
-       
-       'POSSIBLE SIDE AFFECTS MAY INCLUDE':
-        *Causing serious tranformation of reality, passing body and mind to hyperquantum capacities,
-        *Magicular particles in your vicinity may double to relative inevitability,
-        *Fractal dimensions above infinity+1 collapsing into a finite equilibrium.
-        *Mild nausea
-        *Drowsiness
-        
-        You take it politely without question, reasoning that 1 in 1000 is a tremendously small percentage...
-        As you start the 10 minute walk back to your lectures, you pop 3 of the little yellow pills.
-        Suddenly you heart starts to thump, your knees become weak...
-          
-    ''')
-
-
 """ This handles room definitions . A room is a dictionary with the following attributes 
 'name':'namemcnameface'
 'description':'place holder string',
@@ -445,7 +421,7 @@ sirenLair = {
     |             `'..__.'                       |          
     |                                            |""",
 
-    "items": [],
+    "items": [booster],
 
     "creatures" : [siren],
 

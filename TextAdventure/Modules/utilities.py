@@ -18,6 +18,32 @@ skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'towards', 'until', 'us', 'want', 'we', 'what', 'when', 'why',
               'wish', 'with', 'would']
 
+def lockbox():
+    
+    global currentRoom
+    
+    if currentRoom == rooms["treasury"]:
+        print("You kneel before the lockbox , stroking the dials with a finger. If you know the code , you might plunder it.")
+        code = input("Enter the code: ")
+        if code == "0451":
+            print("As you dial the last number in , the lid of the box pops open slightly. You lift the lid the rest of the way, and take the item nestled in the foam.")
+            player["inventory"].append(itemList["bow"])
+        else:
+            print("That isn't the correct code, and the locking pawls stay in place")
+
+
+def checkBuffs():
+    
+    ranRing = False
+    ranBow = False
+    
+    if itemList["ring"] in player["inventory"] and ranRing == False:
+        player["DEX"] += 2
+    
+    if itemList["bow"] in player["inventory"] and ranBow == False:
+        player["STR"] += 5
+        
+
 
 def filterWords(words, skipWords):
 
@@ -109,10 +135,10 @@ def executeTake(item):
     "You cannot take that."
     """
     
-    if item not in ItemList:
+    if item not in itemList:
         print("You cannot take that.")
     else:
-        cur_item = ItemList[item]
+        cur_item = itemList[item]
         if cur_item not in currentRoom['items']:
             print("You cannot take that.")
         else:
@@ -129,10 +155,10 @@ def executeDrop(item):
     no such item in the inventory, this function prints "You cannot drop that."
     """
     
-    if item not in ItemList:
+    if item not in itemList:
         print("You cannot drop that.")
     else:
-        cur_item = ItemList[item]
+        cur_item = itemList[item]
         if cur_item not in player["inventory"]:
             print("You cannot drop that.")
         else:
@@ -192,6 +218,7 @@ def executeGo(direction):
         foughtSiren = True
     elif foughtCyclops == False and currentRoom == rooms["cyclops"]:
         combat(monsters["cyclops"])
+        foughtCyclops = True
     elif currentRoom == rooms["cyclopsEntrance"] and shouted == True:
         rooms["cyclopsEntrance"]["exits"] = {
             
@@ -227,6 +254,7 @@ def executeKill():
     
     if shouldKill.lower() == "yes":
         print("Your body seems to forget how to stay together and you fall apart into a heap of blood, bone and viscera")
+        time.sleep(5)
         exit()
     else:
         print("You consider your situation long and hard, before deciding that you will keep going. Until an end. ")
@@ -261,17 +289,29 @@ def executeExamine(entity):
         global currentRoom
         if entity == "room" :
             print(currentRoom["examineDescription"])
+            
+            if currentRoom == rooms["treasury"]:
+                lockbox()
+            
         elif entity in player["inventory"]:
-            print(ItemList[entity]["description"])
+            print(itemList[entity]["description"])
         else:
             print()
             
+            
 def executeBuild(boat):
-    player["inventory"].remove(planks)
-    player["inventory"].remove(rope)
-    player["inventory"].append(raft)
-    print("With the power of your hands and mind you turn the wood and rope you have gathered into a functional, albeit crude raft. ")
+    
+    if planks and rope in player["inventory"]:
+     
+        player["inventory"].remove(planks)
+        player["inventory"].remove(rope)
+        player["inventory"].append(raft)
+        print("With the power of your hands and mind you turn the wood and rope you have gathered into a functional, albeit crude raft. ")
    
+
+    else:
+        print("You can't build with that!")
+        
 def save():
     
     global currentRoom
@@ -436,4 +476,5 @@ def executeCommand(command):
     
     else:
         print("This makes no sense.")
+        
 

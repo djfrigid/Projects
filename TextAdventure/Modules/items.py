@@ -30,7 +30,7 @@ umbrella = {
 earplug = {
     
     "id" : "earplug",
-    "name": "earbuds",
+    "name": "earplug",
     "description" : "a set of wireless earbuds with a curious coating of the previous owners earwax. Yuck. You try and turn them on... but the battery is dead."
 }
 
@@ -63,7 +63,8 @@ raft = {
 }
 
 tailbone = {
-    "id" : "bone", 
+    
+    "id" : "tailbone", 
     "name": "Coccyx",
     "description": "The tailbone from a human, there is no apparent use for it."
 
@@ -79,7 +80,7 @@ boatInstructions = {
 
 }
 
-booster1 = {
+booster = {
     
     "id" : "booster", 
     "name": "Strange Ring",
@@ -139,7 +140,7 @@ redHerring = {
 
 
 
-ItemList = {
+itemList = {
     
     "dinghy": dinghy,
     "donkey": ass,
@@ -151,7 +152,7 @@ ItemList = {
     "raft": raft,
     "Coccyx": tailbone,
     "instructions": boatInstructions,
-    "ring": booster1,
+    "ring": booster,
     "L": letterL,
     "panacea": panacea,
     "sandwich": sandwich,

@@ -2,9 +2,10 @@ from entities import *
 from items import *
 
 ithaca={
+    
   'name':'The leacture hall',
 
-   ' description ':'place holder string',
+   'description':'place holder string',
 
     'items':[],
 
@@ -12,7 +13,7 @@ ithaca={
 
     'examineDescription':'place holder string',
     
-    'lowHelp' :  '',
+    'lowHelp' :  'placeholder string',
     'midHelp' :  'place holder string',
     'highHelp' : 'place holder string',
 
@@ -35,7 +36,9 @@ calypsoCave={
 
     'down':'basement',
 
-    'south':'beach'},
+    'south':'beach',
+    
+    "north" : "sirenCorridor"},
 
 
 
@@ -147,7 +150,7 @@ circe={
 
     'exits':{'up':'treasury',
 
-        'north':'ithyca',},
+        'north':'ithaca',},
     
                                                                                                #######how does he get to island again>:?
 
@@ -176,7 +179,7 @@ There is a gold door, the door doesn’t have a lock.""",
     'examineDescription':'A plain safe in the corner requires a 4 digits to unlock',
     
 
-    'exits':{'down':'Circe'},
+    'exits':{'down':'circe'},
 
 
     'items':[],
@@ -273,7 +276,7 @@ sirenCorridor = {
 
     'exits':{
 
-        'north':'Circe'
+        'north':'circe'
 
         },
     

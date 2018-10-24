@@ -6,6 +6,7 @@ from rooms import *
 from combat import combat
 currentRoom = rooms["calypsoCave"]
 import time
+shouted = False
 
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'bad', 'beautiful', 'been', 'better', 'big', 'can', 'every', 'for',
@@ -219,18 +220,24 @@ def executeKill():
     else:
         print("You consider your situation long and hard, before deciding that you will keep going. Until an end. ")
         
+        
 def executeShout():
     """A utility function , used to open the way to the cyclops lair"""
     
     global currentRoom
+    global shouted 
     
     print("You yell as loud as you can, the reverberation of the echoes making the illusion that entire empire has just shouted.  ")
     
     if currentRoom == rooms["cyclopsEntrance"]:
+        shouted = True
         print("You don't hear as much as you feel the cyclops rise from his slumber and heft several large heavy bars that previously prevented the door from functioning. ")
     else:
         print("despite the volume of your cry, nothing seems to react to it. ")
         
+    return shouted 
+
+   
 def hermes():
     
     global currentRoom

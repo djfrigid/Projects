@@ -13,7 +13,7 @@ example dictionary = {
 
 Implement conditional blocks for:: siren corridor to siren lair: Circe to icatha: Circe to Kyrla:icatha to Circe.
 ensure siren lair works
-add text to display info e.g. "you have dropped...", "You can go..."
+
 SPELLING
 
 
@@ -26,3 +26,4 @@ fix potential travel bugs
 fix bug where initiating a fight after loading crashes the game
 double boss
 build coccyx ring
+add text to display info e.g. "you have dropped...", "You can go..."

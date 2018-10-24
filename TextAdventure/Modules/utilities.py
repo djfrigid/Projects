@@ -1,4 +1,4 @@
-import re
+﻿import re
 import random
 from items import *
 from entities import *
@@ -102,7 +102,6 @@ def divineIntervention(): #this as present can be abused , consider adding a pen
 #death
 
 
-
 def executeTake(item):
     """This function takes an item as an argument and moves this item from the
     list of items in the current room to the player's inventory. However, if
@@ -110,17 +109,14 @@ def executeTake(item):
     "You cannot take that."
     """
     
-    if item not in ItemList:
-        print("You cannot take that.")
-    else:
-        cur_item = ItemList[item]
-        if cur_item not in currentRoom['items']:
-            print("You cannot take that.")
+    for i in currentRoom["items"]:
+        
+        if i["id"] == item:
+            player["inventory"].append(ItemList[item])
+            currentRoom["items"].remove(ItemList[item])
+        
         else:
-            player["inventory"].append(cur_item)
-            print("You have taken " + cur_item["name"])
-            currentRoom['items'].remove(cur_item)
-    
+            print("You cannot take that")
         
 def executeDrop(item):
     
@@ -129,16 +125,14 @@ def executeDrop(item):
     no such item in the inventory, this function prints "You cannot drop that."
     """
     
-    if item not in ItemList:
-        print("You cannot drop that.")
-    else:
-        cur_item = ItemList[item]
-        if cur_item not in player["inventory"]:
-            print("You cannot drop that.")
+    for i in player["inventory"]:
+        
+        if item == i["id"]:
+            store = i
+            player["inventory"].remove(i)
+            currentRoom["items"].append(store)
         else:
-            print("You have dropped " + cur_item['name'])
-            currentRoom['items'].append(cur_item)
-            player["inventory"].remove(cur_item)
+            print("You cannot drop that")
             
     
    
@@ -193,6 +187,12 @@ def executeGo(direction):
         foughtSiren = True
     elif foughtCyclops == False and currentRoom == rooms["cyclops"]:
         combat(monsters["cyclops"])
+    elif currentRoom == rooms["cyclopsEntrance"] and shouted == True:
+        rooms["cyclopsEntrance"]["exits"] = {
+            
+            "west":"calypsoCave",
+            
+            "south":"cyclops"}
     
         
 def executeSwim():
@@ -304,13 +304,13 @@ def load():
     player["MAXCON"] = LoadList[7]
 
     if LoadList[8] == "Calypso's cave":
-        currentRoom = rooms['calypsoCave']
+        currentRoom = rooms["calypsoCave"]
     elif LoadList[8] == "Calypso's island":
-        currentRoom = rooms['beach']
+        currentRoom = rooms["beach"]
     elif LoadList[8] == "The Basement":
         currentRoom = rooms["basement"]
     elif LoadList[8] == "Circe's Mansion":
-        currentRoom = rooms["circe"]
+        currentRoom = rooms["Circe"]
     elif LoadList[8] == "Circe's Treasury":
         currentRoom = rooms["treasury"]
     elif LoadList[8] == "Professor Poly's office":
@@ -320,12 +320,9 @@ def load():
     elif LoadList[8] == "The Long Corridor":
         currentRoom = rooms["sirenCorridor"]
     elif LoadList[8] == "Cheerleading practice room":
-        currentRoom = rooms["sirenLair"]
-    else:
-        print("You cannot load")  
+        currentRoom = rooms["sirenLair"]  
         
 def inventory():
-    
     
     print("You are currently carrying:")
     
@@ -358,45 +355,6 @@ def playerStats(player):
     print("CONSTITUTION: " + str(player["CON"]))
     print("WISDOM: " + str(player["WIS"]))
     print("STAMINA: " + str(player["STA"]))
-    
-def eat(item):
-
-    if item == "sandwich":
-        if ItemList["sandwich"] in player["inventory"]:
-            if player["CON"] >= player["MAXCON"] - 10:
-                player["CON"] = player["MAXCON"]
-                print("Your hp has maxed out.")
-                player["inventory"].remove(sandwich)
-            else:
-                player["CON"] += 10
-                print("You recover 10hp")
-                player["inventory"].remove(sandwich)
-        else:
-            print("You do not have this item.")
-    elif item == "drink":
-        if ItemList["drink"] in player["inventory"]:
-            if player["CON"] >= player["MAXCON"] - 3:
-                player["CON"] = player["MAXCON"]
-                print("Your hp has maxed out.")
-                player["inventory"].remove(drink)
-            else:
-                player["CON"] += 3
-                print("You recover 3hp")
-                player["inventory"].remove(drink)
-        else:
-            print("You do not have this.")
-    elif item == "crisps":
-        if ItemList["crisps"] in player["inventory"]:
-            if player["CON"] >= player["MAXCON"] - 5:
-                player["CON"] = player["MAXCON"]
-                print("Your hp has maxed out.")
-                player["inventory"].remove(crisps)
-            else:
-                player["CON"] +=5
-                print("You recover 5hp")
-                player["inventory"].remove(crisps)
-        else:
-            print("You do not have this item.")
             
 def executeCommand(command):
     
@@ -476,10 +434,6 @@ def executeCommand(command):
           
     elif command[0] == "stats":
         playerStats(player)
-        
-    elif command[0] == "eat":
-        if len(command) > 1:
-            eat(command[1])
     
     else:
         print("This makes no sense.")

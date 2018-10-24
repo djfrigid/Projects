@@ -8,13 +8,11 @@
 from entities import *
 from items import *
 
-ithaca={
-    
-  'name':'The leacture hall',
 
 
 
-print('''       Out into the rain in misrable Cardiff you go, after reading an article about the amount of 
+
+print('''       Out into the rain in miserable Cardiff you go, after reading an article about the amount of 
 	deaths caused by pharmacy errors(1 in 1000!).
 	You are hunched over with a cigarette in your mouth, it goes out seconds after it was lit after 
 	a BMWx5 sped through a puddle.
@@ -37,35 +35,6 @@ print('''       Out into the rain in misrable Cardiff you go, after reading an a
           
 
     ''')
-
-
-
-  #  name - string 
-
-  #  description - String 
-#
-  #  items - list of dictionaries 
-
-#    creatures - list of dictionaries
-
-  #  examine Description - String
-    
-    #lowHelp - String - the Low WIS hint
-    
-  #  midHelp - String - the mid WIS hint
-    
-  #  highHelp - String - the high WIS hint
-
-#    exits - dictionary
-
-
-
-
-
-
-
-
-
 
 
 """ This handles room definitions . A room is a dictionary with the following attributes 
@@ -157,14 +126,10 @@ calypsoCave={
 	'east':'cyclopsEntrance',
 
 	'down':'basement',
-
-<<<<<<< HEAD
-    'south':'beach',
+   
+    "north" : "sirenCorridor",
     
-    "north" : "sirenCorridor"},
-=======
-	'south':'Beach'},
->>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
+	'south':'beach'},
 
 
 
@@ -186,7 +151,6 @@ calypsoCave={
 
 }
 
-	
 
 beach={
 
@@ -346,19 +310,13 @@ circe={
 
     'exits':{'up':'treasury',
 
-<<<<<<< HEAD
-        'north':'ithaca',},
-=======
-	    'north':'ithyca',
+	    'north':'ithaca',
 	     
 	    'south':'sirenCorridor'},
->>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
-    
-                                                                                               #######how does he get to island again>:?
 
-    'items':[],
+        'items':[],
 
-    'creatures':[],
+        'creatures':[],
 
     
     'lowHelp' :  'Perhaps a command would further your cause.',
@@ -368,7 +326,6 @@ circe={
 }
 
 	
-
 treasury={
 
     "name" : "Circe's Treasury",
@@ -571,11 +528,7 @@ sirenCorridor = {
 
     'exits':{
 
-<<<<<<< HEAD
-        'north':'circe'
-=======
-	    'north':'Circe'
->>>>>>> 8ab6abf5d96cea64dc88b07c3d6b19266c266749
+       'north':'circe'
 
 	    },
     
@@ -674,7 +627,7 @@ rooms = {
          
     'calypsoCave':calypsoCave,
 
-    'Beach':beach,
+    'beach':beach,
 
     'basement':basement,
 
@@ -684,7 +637,7 @@ rooms = {
 
     'sirenCorridor':sirenCorridor,
 
-   'sirenLair':sirenLair,
+    'sirenLair':sirenLair,
 
     'treasury':treasury,
 
@@ -695,9 +648,3 @@ rooms = {
     
     }
 
-  
-
-
-#Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
-#SyntaxError: invalid syntax
-#>>> 

@@ -323,6 +323,32 @@ def inventory():
     for key in player["inventory"]:
         print(key["name"])
         
+        
+def instruction():
+    print("""You can:
+        go - move to another room(either north, south, east, west, up, or down)
+        drop - drop an item
+        take - take an item
+        pray - pray to the Gods
+        build - build using items in your inventory
+        examine - look a bit closer at a room or item
+        help - Hermes will give you a hint
+        shout - SHOUT!
+        swim - go for a swim
+        kill - sometimes life gets a bit too much
+        save - save your progress
+        load - load a savegame
+        inventory - see what you are carrying
+        stats - have a look at your current stats
+        eat - consume an item in your inventory""")
+    
+    
+def playerStats(player):
+    print("STRENGTH: " + str(player["STR"]))
+    print("DEXTERITY: " + str(player["DEX"]))
+    print("CONSTITUTION: " + str(player["CON"]))
+    print("WISDOM: " + str(player["WIS"]))
+    print("STAMINA: " + str(player["STA"]))
             
 def executeCommand(command):
     
@@ -396,6 +422,12 @@ def executeCommand(command):
     
     elif command[0] == "inventory":
         inventory()
+        
+    elif command[0] == "instruction":
+        instruction()
+          
+    elif command[0] == "stats":
+        playerStats(player)
     
     else:
         print("This makes no sense.")

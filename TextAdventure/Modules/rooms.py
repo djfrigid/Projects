@@ -436,7 +436,7 @@ sirenCorridor = {
     'midHelp' : 'What did you steal from Poly that could help you cross?',
     'highHelp' : 'Probably wise to follow the two mens example, and that dinghy will take you over the waters',
 
-    'exits':{'south':'calypsoCave'},
+    'exits':{'south':'calypsoCave', "north" : "blackhole"},
 }
 
 sirenLair = {
@@ -479,7 +479,7 @@ sirenLair = {
     'midHelp' :  'There is no escaping this fight im afraid',
     'highHelp' : 'There is no escaping this fight im afraid',
 
-    'exits':{}, 
+    'exits':{"north" : "circe"}, 
 }
 
 kryllafight={

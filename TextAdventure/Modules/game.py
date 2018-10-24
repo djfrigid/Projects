@@ -62,7 +62,7 @@ def checkExits():
 def main():
     
 
-    #os.system("start D:\Eclipse\eclipse\Repositories\TextAdventure\TextAdventure\Modules\Sound.wav")
+    os.system("start D:\Eclipse\eclipse\Repositories\TextAdventure\TextAdventure\Modules\Sound.wav")
     print('''       Out into the rain in miserable Cardiff you go, after reading an article about the amount of 
     deaths caused by pharmacy errors(1 in 1000!).
     You are hunched over with a cigarette in your mouth, it goes out seconds after it was lit after 

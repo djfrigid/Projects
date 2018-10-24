@@ -1,4 +1,5 @@
-﻿import re
+﻿
+import re
 import random
 from items import *
 from entities import *
@@ -24,10 +25,10 @@ def lockbox():
     global currentRoom
     
     if currentRoom == rooms["treasury"]:
-        print("You kneel before the lockbox , stroking the dials with a finger. If you know the code , you might plunder it.")
+        print("You kneel before the lockbox, stroking the dials with a finger. If you know the code , you might plunder it.")
         code = input("Enter the code: ")
         if code == "0451":
-            print("As you dial the last number in , the lid of the box pops open slightly. You lift the lid the rest of the way, and take the item nestled in the foam.")
+            print("As you dial the last number in, the lid of the box pops open slightly. You lift the lid the rest of the way, and take the item nestled in the foam.")
             player["inventory"].append(itemList["bow"])
         else:
             print("That isn't the correct code, and the locking pawls stay in place")
@@ -194,14 +195,16 @@ def printRoom():
     global currentRoom
         
     name = currentRoom["name"].upper()
-    
-    print()
-    
-    description = currentRoom["description"]
-    
-    print(name.upper())
-    print()
-    print(description)
+    if name == "BLACKHOLE":
+        name = ""
+    else:
+        print()
+        
+        description = currentRoom["description"]
+        
+        print(name.upper())
+        print()
+        print(description)
         
 def executeGo(direction):
     
@@ -234,7 +237,9 @@ def executeGo(direction):
         combat(siren)
         foughtSiren = True
     elif currentRoom == rooms["blackhole"] and itemList["earplug"] not in player["inventory"]:
-        print(123123123)
+        executeGo('west')
+    elif currentRoom == rooms["blackhole"] and itemList["earplug"] in player["inventory"]:
+        executeGo('north')
     elif foughtCyclops == False and currentRoom == rooms["cyclops"]:
         combat(monsters["cyclops"])
         foughtCyclops = True
@@ -360,7 +365,6 @@ def load():
     for line in file:
         line = re.sub(r"[\n]","",line)
         LoadList.append(line)
-
     print(LoadList)
     
     player["name"] = LoadList[0]
@@ -371,7 +375,6 @@ def load():
     player["STA"] = LoadList[5]
     player["inventory"] = LoadList[6]
     player["MAXCON"] = LoadList[7]
-
     if LoadList[8] == "Calypso's cave":
         currentRoom = rooms["calypsoCave"]
     elif LoadList[8] == "Calypso's island":
@@ -554,5 +557,4 @@ def executeCommand(command):
     elif command[0] == "save":
         save()
 """
-        
 

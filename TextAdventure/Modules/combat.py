@@ -112,7 +112,8 @@ def combat(monster):
             print("---------------------------------")
             
             if monsters["box"] == monster:
-                player["inventory"].append(planks)
+                print("The box shatters into pieces, several to be good sturdy planks, you take them, confident they will be of use.")
+                player["inventory"].append(itemList["planks"])
 
                 
         

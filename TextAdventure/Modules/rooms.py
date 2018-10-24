@@ -21,7 +21,7 @@ from entities import *
 ithaca={
     'name':'The Lecture Hall',
 
-    'description ':"""Thank the Gods you are finally home! But wait, your home is infested with hundreds of men all
+    'description':"""Thank the Gods you are finally home! But wait, your home is infested with hundreds of men all
     hoping for your wife's hand in marriage. Your wife looks as young as the day you left, but the years have not
     been as kind to you, she is doubtful of your claim to be her Ulysses. She asks you to recount details of your
     journey, the Gods will tell her if you are being truthful.

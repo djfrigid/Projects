@@ -1,29 +1,44 @@
-from items import *
+﻿from items import *
 from entities import *
+import time
 
-print('''       Out into the rain in miserable Cardiff you go, after reading an article about the amount of 
+print('''   WELCOME TO...
+        ████████╗██╗  ██╗ █████╗ ██████╗ ██████╗  ██████╗ ███████╗
+        ╚══██╔══╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔════╝
+           ██║   ███████║███████║██████╔╝██████╔╝██║   ██║███████╗
+           ██║   ██╔══██║██╔══██║██╔══██╗██╔══██╗██║   ██║╚════██║
+           ██║   ██║  ██║██║  ██║██║  ██║██║  ██║╚██████╔╝███████║
+           ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝''')
+
+time.sleep(2.5)
+print()
+print('''    Out into the rain in miserable Cardiff you go, after reading an article about the amount of 
     deaths caused by pharmacy errors(1 in 1000!).
     You are hunched over with a cigarette in your mouth, it goes out seconds after it was lit after 
-    a BMWx5 sped through a puddle.
-    Treating yourself to Tesco’s' 3 pound meal deal, you arrive at the pharmacy. The slippers you 
+    a BMWx5 sped through a puddle.''')
+time.sleep(2.5)
+print()
+print('''    Treating yourself to Tescos' 3 pound meal deal, you arrive at the pharmacy. The slippers you 
     are wearing are visibly soaked, they squelch as you approach the counter. The woman
     behind it looks at you judgingly, visibly unimpressed, and when you ask for a box of flu medicine,
     she returns squinting at the box in her hand, seemingly unable to read it without
-    her glasses. She hands you a box of 'Oddssydinazacitidine'.
-       
-       'POSSIBLE SIDE AFFECTS MAY INCLUDE':
-        *Causing serious transformation of reality, passing body and mind to hyper quantum capacities,
-        *Magicular particles in your vicinity may double to relative inevitability,
-        *Fractal dimensions above infinity+1 collapsing into a finite equilibrium.
-        *Mild nausea
-        *Drowsiness
-        
-        You take it politely without question, reasoning that 1 in 1000 is a tremendously small percentage...
-        As you start the 10 minute walk back to your lectures, you pop 3 of the little yellow pills.
-        Suddenly you heart starts to thump, your knees become weak...
-          
+    her glasses. She hands you a box of 'Oddssydinazacitidine'.''')
+time.sleep(2.5)
+print()
+print('''   'POSSIBLE SIDE AFFECTS MAY INCLUDE':
+    *Causing serious transformation of reality, passing body and mind to hyper quantum capacities,
+    *Magicular particles in your vicinity may double to relative inevitability,
+    *Fractal dimensions above infinity+1 collapsing into a finite equilibrium.
+    *Mild nausea
+    *Drowsiness''')
+time.sleep(2.5)
+print()
+print('''    You take it politely without question, reasoning that 1 in 1000 is a tremendously small percentage...
+    As you start the 10 minute walk back to your lectures, you pop 3 of the little yellow pills.
+    Suddenly you heart starts to thump, your knees become weak...
+    ------------------------------------------------------------------------------------------------------------      
     ''')
-
+time.sleep(3.5)
 
 """ This handles room definitions . A room is a dictionary with the following attributes 
 'name':'namemcnameface'
@@ -76,11 +91,11 @@ calypsoCave={
 
     "description": """  Your mind boggled, you arrive at a place that somewhat resembles your university's 
     reception, the only difference is that it's actually a cave, on an island, in Ancient Greece.
-    A bottle hits your head and although you’re somewhat disappointed that it’s not wine, between the shattered glass you find something with some Instructions written on it.
+    A bottle hits your head and although youâ€™re somewhat disappointed that itâ€™s not wine, between the shattered glass you find something with some Instructions written on it.
     _____________________________________________
     |  | '' '  /        |'' ' |      \'  ' '|     |
     |   \' '  /         |' '' /       | ' ''/     |
-    |    \ ''|      \ '' /          \' ' |      |          
+    |    \ ''|          \ '' /        \  ' |     |          
     |     |  /           \ '|          \' /       | 
     |      \/             | /           \/       |
     |                     \/                     |
@@ -134,7 +149,7 @@ beach={
     |_=-=-_-_=-=_,-"        /__|__               |
     |-=_-_=-=_,-"         \--------/       .     |
     | -_=_,-"                                    |
-    |=_-"        __                  __   |
+    |=_-"        __                  __          |
     |-"    .                  .                  |
     |            .                    .     .    |
     |                        __          __      |
@@ -147,7 +162,7 @@ beach={
     'examineDescription':"""Time has taken its toll on the once great ship, it is smashed and battered. 
     There is a rope hanging from the mast are green and slippery with algae""",
 
-    'lowHelp' :  '''Whatever you do, don’t try and go for a swim... ''',
+    'lowHelp' :  '''Whatever you do, donâ€™t try and go for a swim... ''',
     'midHelp' :  'What do you need from here?',
     'highHelp' : 'The wreck has some things that could help you escape',
 
@@ -245,7 +260,7 @@ circe={
     
     'lowHelp' :  'Perhaps a command would further your cause.',
     'midHelp' :  'Could this be any more obvious?',
-    'highHelp' : '''Don’t play innocent man, we know who poked his eye out. ''',
+    'highHelp' : '''Donâ€™t play innocent man, we know who poked his eye out. ''',
 
     'exits':{'up':'treasury','north':'ithaca','south':'sirenCorridor'},
 
@@ -286,7 +301,7 @@ treasury={
     'examineDescription':'A plain safe in the corner requires a 4 digit code to unlock',
 
     'lowHelp' :  'There are only 10,000 options you have to go through really... or perhaps its hidden somewhere and you missed it. ',
-    'midHelp' :  """Let’s just say the images of the rooms weren't added because of the impressive graphics""",
+    'midHelp' :  """Letâ€™s just say the images of the rooms weren't added because of the impressive graphics""",
     'highHelp':  'The code is hidden in the rooms, but you must look carefully',
 
     'exits':{'down':'circe'}
@@ -312,7 +327,7 @@ cyclopsEntrance = {
     |      \||.-_/#|  |#\  /-' `\_      }}{      |
     |       |||/###| .|##\_  \._   `-   {{}      |
     | ""'   |_|####|  |####\_`.  -' \=-~{ .-^- _ |
-    |""'"'     " "'"''"'   '" ''"'"''"   `}"''"|  
+    |""'"'     " "'"''"'   '" ''"'"''"   `}"''"  |  
     | ""'""        ""'"''    "'""      ""'""     |
     |""     "'"" ''""          '"'""'            |
     | "''"" "'"'       "'''" "'         ""' ""'  |
@@ -487,7 +502,7 @@ Good luck I can only hope you have the contence of the safe in the treasurey''',
 }
 
 
-blackhole{'name':'blackhole',
+blackhole = {'name':'blackhole',
 
     'description':'',
 

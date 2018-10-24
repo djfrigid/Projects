@@ -50,6 +50,15 @@ cyclops = {
     "CON":30    
 }
 
+krylla = {
+    
+    "name" : "krylla",
+    "STR" : 40,
+    "DEX" : 30,
+    "CON" : 50
+        
+}
+
 monsters = {
     
     "box": box,

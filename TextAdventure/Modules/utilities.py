@@ -326,6 +326,7 @@ def load():
         
 def inventory():
     
+    
     print("You are currently carrying:")
     
     for key in player["inventory"]:

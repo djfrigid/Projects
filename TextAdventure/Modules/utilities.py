@@ -230,7 +230,6 @@ def executeGo(direction):
     else:
         print("No, You cannot go there")
         
-        
     if currentRoom == rooms["basement"] and foughtBox == False:
         combat(box)
         foughtBox = True

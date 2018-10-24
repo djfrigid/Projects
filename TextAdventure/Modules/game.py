@@ -42,22 +42,8 @@ def checkCave():
             "down" : "basement",
             "south" : "beach"
             
-            }
-        
-        
-        
-def checkLair():
+            }         
     
-    global currentRoom
-    
-    if currentRoom == rooms["sirenCorridor"] and earplug not in player["inventory"]:
-        currentRoom = rooms["sirenLair"]           
-    
-def checkExits():
-    
-    checkCave()
-    checkLair()
-
 
 def main():
     
@@ -91,13 +77,12 @@ def main():
     print(rooms["calypsoCave"]["name"].upper())
     print()
     print(rooms["calypsoCave"]["description"])
-    
-    
+        
     while True:
         
         
                     
-        checkExits()
+        checkCave()
         
         action = input("> ")
         

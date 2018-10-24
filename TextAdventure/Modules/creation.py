@@ -2,6 +2,7 @@
 
 from entities import player
 from rooms import *
+import re
 
 def create():
      
@@ -20,6 +21,10 @@ def create():
         print("You have " + str(availablePoints) + " points left.")
         
         choice = input(">")
+        
+        choice = choice.upper()
+        choice = choice.strip()
+        choice = re.sub(r"[^STR, DEX, WIS, STA, CON]", "", choice)
         
         number = int(input("And how many points?"))
         
